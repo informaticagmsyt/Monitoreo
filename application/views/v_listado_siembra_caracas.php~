@@ -1,0 +1,40 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
+
+<body>
+<br>
+
+<section>
+    <div  class="container-fluid">
+    <p><h4 style="bg-success" class="text-primary"> Listado de personas Registadas en el Plan  Siembra Caracas </h4></p>
+    </div>
+    </section>
+    <hr style="   border-width: 3px; dorder:solid;" class="bg-danger">
+<div class="container-fluid">
+	<div class=" col-md-12">
+			  <table id="tabla"  class=" table table-striped table-sm" style="width:100%">
+                <thead>
+                    <tr>
+                        <th scope="col">Cedula</th>
+                        <th scope="col">Nombres</th>
+                        <th scope="col">Apellidos</th>
+                        <th scope="col">Telefonos</th>
+                       
+                    </tr>
+                </thead>
+                <tbody>
+       
+	  <tr>
+            <th scope="row"><?php echo $listar->cedula;?></th>
+            <td></td>
+            <td>></td>
+            <td></td>
+            <td></td>
+           
+    </tr>
+    
+        </tbody>
+
+
+</body>

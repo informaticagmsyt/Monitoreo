@@ -1,0 +1,44 @@
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
+<script type="text/javascript" src="<?= base_url()?>public/js/bootstrap.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="<?= base_url()?>public/js/jquery-3.1.1.min.js" crossorigin="anonymous"></script>
+<script type="text/javascript" src="<?= base_url()?>public/js/buttons.bootstrap4.js" crossorigin="anonymous"></script>
+<script src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/pdfmake.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.36/vfs_fonts.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.html5.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.print.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/buttons.flash.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+<script src="https://cdn.datatables.net/buttons/1.5.2/js/dataTables.buttons.min.js"></script>
+<script type="text/javascript" src="Buttons-1.5.4/js/dataTables.buttons.min.js"></script>
+   <script type="text/javascript">
+$(document).ready(function() {
+        $('#tabla').DataTable({
+                responsive: true,
+                dom: 'Bfrtip',
+        buttons: [
+            'copy', 'excel',  'print'
+        ],
+        "language": {
+                  "lengthMenu": "Mostrar _MENU_ resultados por pagina",
+                  "zeroRecords": "No existen Registros",
+                  "info": "Mostando pagina _PAGE_ de _PAGES_",
+                  "infoEmpty": "No hay registros",
+                  "sSearch":         "Buscar:",
+
+            "oPaginate": {
+                    "sFirst":    "Primero",
+                    "sLast":     "Último",
+                    "sNext":     "Siguiente",
+                    "sPrevious": "Anterior"
+                    },
+
+        },
+        });
+        
+    });
+
+    </script>
+
+</html>

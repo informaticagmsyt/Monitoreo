@@ -1,0 +1,306 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
+  <br> <br>
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card text-center ">
+                    <div class="card-header text-white bg-danger"> <b> <h3>REGISTRO DE PROYECTOS <h3> </b>
+                    </div>
+                        <div class="card-body">
+                           <form action="<?php echo  base_url();?>index.php/c_proyecto/guardar" method="POST">
+                           <div class="form-group">
+                           <h5 class="card-title"> <b> Datos del Proyecto</b></h5>
+                           <hr>
+                                <div class="row">
+                               
+                                <div class="col-md-8">
+                                            <label for="formGroupExampleInput">Nombre de Proyecto</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" name="nombre_proyecto" placeholder="00000000" required>
+                                        </div> 
+                                        <div class="col-md-4">
+                                            <label for="formGroupExampleInput">Estatus de funcionamiento</label>
+                                            <select   name="estatus_proyecto" class="form-control">
+                                                <option value="Activo">Activo</option>
+                                                <option value="Planificacion">Planificacion</option>
+                                                <option value="Reacondicionamiento">Reacondicionamiento</option>
+                                                <option value="Paralizado">Paralizado</option>
+                                            </select>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                       <div class="col-md-12">
+                                            <label for="formGroupExampleInput">Descripcion del Proyecto </label>
+                                            <textarea name="descripcion_proyecto" id="" class="form-control"  cols="115" rows="3" required></textarea>
+                                            
+                                        </div>
+                            </div>
+                                     <br>
+                           <h5 class="card-title"> <b> Datos de la Unidad de Produccion</b></h5>
+                           <hr>
+                                
+                                <br>
+                                 <div class="row">
+                                    <div class="col-md-2">
+                                            <label for="formGroupExampleInput">Rif</label>
+                                            <select   name="tipo" class="form-control">
+                                                <option value="J">J</option>
+                                                <option value="C">C</option>
+                                                <option value="V">V</option>
+                                                <option value="G">G</option>
+                                            </select>
+                                    </div> 
+                                        <div class="col-md-3">
+                                            <label for="formGroupExampleInput">Numero de Rif</label>
+                                            <input type="number" class="form-control" id="formGroupExampleInput" name="rif_empresa" placeholder="00000000" required>
+                                        </div> 
+                                        <div class="col-md-7">
+                                            <label for="formGroupExampleInput">Nombre o Razon Social</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" name="nombre_empresa"" placeholder="" required>
+                                        </div>
+                                 </div>
+                                 <div class="row">
+                                  
+                                        <div class="col-md-3">
+                                            <label for="formGroupExampleInput">Telefono</label>
+                                            <input type="number" class="form-control" id="formGroupExampleInput" name="telefono_empresa" placeholder="00000000" required>
+                                        </div> 
+                                        <div class="col-md-9">
+                                            <label for="formGroupExampleInput">Direccion</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" name="direccion_empresa"" placeholder="" required>
+                                        </div>
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-3">
+                                            <label for="formGroupExampleInput">Estado</label>
+                                            <select   name="estado" id="estado" class="form-control">
+                                            <?php
+                                                foreach ($estado as $estado) { 
+	                                        ?>
+                                                <option value="<?php echo $estado->id_estado;?>"><?php echo $estado->estado;?></option>
+                                            <?php
+                                              }
+                                            ?>
+                                            </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                            <label for="formGroupExampleInput">Municipio</label>
+                                            <select id="municipio"  name="municipio" class="form-control">
+                                                <option value="J">Seleccione</option>
+                                            </select>
+                                    </div> 
+                                    <div class="col-md-3">
+                                            <label for="formGroupExampleInput">Parroquia</label>
+                                            <select   name="parroquia" id="parroquia" class="form-control">
+                                                <option value="J">Seleccione</option>
+                                            </select>
+                                    </div>  
+                                    <div class="col-md-3">
+                                            <label for="formGroupExampleInput">Ciudad</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" name="ciudad" placeholder="00000000" required>
+                                        </div>  
+                                 </div>
+                                 <div class="row">
+                                    <div class="col-md-3">
+                                            <label for="formGroupExampleInput">¿Esta Registrarda? <small>(La Empresa)</small> </label>
+                                            <select  name="registrada" class="form-control">
+                                                <option value="J">Seleccione</option>
+                                            </select>
+                                    </div>
+                                    <div class="col-md-3">
+                                            <label for="formGroupExampleInput">Codigo Situr</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" name="codigo_situr" >
+                                    </div> 
+                                    <div class="col-md-3">
+                                            <label for="formGroupExampleInput">Codigo Sunagro</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" name="codigo_sunagro" placeholder="00000000">
+                                    </div>  
+                                    <div class="col-md-3">
+                                            <label for="formGroupExampleInput">Institucion Responsable</label>
+                                            <input type="text" class="form-control" id="formGroupExampleInput" name="inst_responsable" required>
+                                    </div>  
+                                        
+                                    </div>
+                                 <!--**************************************************************************************************-->
+                                        <br>
+                                        <h5 class="card-title"> <b> Datos de Infraestructura y Edificacion</b></h5>
+                                        <hr>
+
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <label for="formGroupExampleInput">Edificacion  <small>(Face Constructiva)</small></label>
+                                                        <select   name="edificacion" class="form-control">
+                                                            <option value="culminada">Culminada </option>
+                                                            <option value="estructura">Estructura </option>    
+                                                            <option value="cerramiento">Cerramiento </option>
+                                                            <option value="acabado">Acabado </option>  
+                                                        </select>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <label for="formGroupExampleInput">Observaciones</label>
+                                                    <input type="text" class="form-control" id="formGroupExampleInput" name="obs_infraestructura"  required>
+                                                </div>
+                                               <div class="col-md-4">
+                                                    <label for="formGroupExampleInput">Instalaciones Sanitarias</label>
+                                                        <select   name="condicion_baño" class="form-control">
+                                                            <option value="activo">Activas</option>  
+                                                            <option value="inoperativo">Inoperativas</option>  
+                                                            <option value="contruccion">Construccion</option> 
+                                                            <option value="no posee">No Posee</option> 
+                                                        </select>
+                                                </div>
+                                        </div>
+                                        <br>
+                                        <h5 class="card-title">  <b>Servicios Publicos</b> </h5>
+                                        <hr>
+                                            <div class="row">
+                                                
+                                                <div class="col-md-4">
+                                                    <label for="formGroupExampleInput">Acometida <small>Aguas Blancas</small></label>
+                                                        <select   name="aguas_blancas" class="form-control">
+                                                            <option value="posee">Posee</option>  
+                                                            <option value="no posee">No Posee</option>  
+                                                            <option value="en construccion">En Construccion</option> 
+                                                        </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="formGroupExampleInput">Acometida <small>Aguas servidas</small></label>
+                                                        <select   name="aguas_servidas" class="form-control">
+                                                            <option value="posee">Posee</option>  
+                                                            <option value="no posee">No Posee</option>  
+                                                            <option value="en construccion">En Construccion</option> 
+                                                        </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="formGroupExampleInput">Servicio de Gas</label>
+                                                        <select   name="servicio_gas" class="form-control">
+                                                            <option value="posee">Directo </option>  
+                                                            <option value="no posee">Bombona</option>  
+                                                            <option value="en construccion">No Posee</option> 
+                                                        </select>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                            
+                                                <div class="col-md-4">
+                                                    <label for="formGroupExampleInput">Servicio Electrico<small>Acometida</small></label>
+                                                        <select   name="serv_electrico" class="form-control">
+                                                            <option value="posee">Posee</option>  
+                                                            <option value="no posee">No Posee</option>  
+                                                            <option value="en construccion">En Construccion</option> 
+                                                        </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="formGroupExampleInput">Vialidad <small></small></label>
+                                                        <select   name="vialidad" class="form-control">
+                                                            <option value="posee">Tierra</option>  
+                                                            <option value="no posee">Granzon</option>  
+                                                            <option value="en construccion">Azfalto</option> 
+                                                            <option value="no posee">Cemento</option>  
+                                                            <option value="en construccion">Fluvial</option> 
+                                                        </select>
+                                                </div>
+                                                <div class="col-md-4">
+                                                    <label for="formGroupExampleInput">Aceo Urbano <small>(Disfruta del Servicio)</small></label>
+                                                        <select   name="aceo_urbano" class="form-control">
+                                                            <option value="si">Si</option>  
+                                                            <option value="no ">No</option>  
+                                                            
+                                                        </select>
+                                                </div>
+                                                
+                                            </div>
+<!--************************************************************************************************************************************-->
+                                        <br>
+                                        <h5 class="card-title"> <b> Datos de Operatividad</b></h5>
+                                        <hr>
+                                        <div class="row">
+                                                <div class="col-md-4">
+                                                    <label for="formGroupExampleInput">Funcionamiento Operativo</label>
+                                                        <select   name="fnto-operativo" class="form-control">
+                                                            <option value="posee">Fase de Prueba <small> 0% -- 20% </small></option>
+                                                            <option value="posee">Activo con Limitaciones <small> 21% -- 50% </small></option>    
+                                                            <option value="posee">En Recuperacion <small> 51% -- 80% </small></option>
+                                                            <option value="posee">Activo <small> 81% -- 100% </small></option>  
+                                                        </select>
+                                                </div>
+                                                <div class="col-md-8">
+                                                    <label for="formGroupExampleInput">Observaciones</label>
+                                                    <input type="text" class="form-control" id="formGroupExampleInput" name="obsv_operativas"  required>
+                                                </div>
+                                        </div>
+                                       
+                                        
+                                        <br>
+                                        <div class="row">
+                                            <div class="offset-md-5 col-md-2">
+                                                <input type="submit" class="btn btn-primary" id="formGroupExampleInput" value="Guardar">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    <!--<div class="card-footer text-muted">2 days ago</div>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<body>
+<script type="text/javascript">
+    $(document).ready(function(){
+        $('#estado').on('change',function(){
+            var id_estado = $(this).val();
+          
+           if(id_estado == ''){
+               $('#municipio').prop('disabled',true);
+           }else{
+            $('#municipio').prop('disabled',false);
+            $.ajax({
+                url:"<?php echo base_url()?>index.php/C_select/get_municipio",
+                type:"POST",
+                encoding:"UTF-8",                
+                data:{'id_estado' : id_estado},
+                datatype: 'json',
+                success: function(data){
+                   $('#municipio').html(data);
+                   
+                },error: function (){
+                    alert('Ocurrio un Error');
+                }
+            });
+           }
+        });
+    });
+/**************************************************************************************************************************************************** */
+
+    $(document).ready(function(){
+        $('#municipio').on('change',function(){
+            var id_municipio = $(this).val();
+           
+          if(id_municipio == ''){
+               $('#parroquia').prop('disabled',true);
+     }else{
+            $('#parroquia').prop('disabled',false);
+            $.ajax({
+                url:"<?php echo base_url()?>index.php/C_select/get_parroquia",
+                type:"POST",
+                encoding:"UTF-8",
+                data:{'id_municipio' : id_municipio},
+                datatype: 'json',
+                success: function(data){
+                   $('#parroquia').html(data);  
+                },error: function (){
+                   alert('Ocurrio un Error');
+               }
+            });
+          }
+        });
+    });
+</script>
+</body>
+</html>

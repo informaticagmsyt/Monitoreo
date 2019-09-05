@@ -1,0 +1,179 @@
+<?php
+defined('BASEPATH') OR exit('No direct script access allowed');
+?><!DOCTYPE html>
+  <br>
+  <body> 
+  <section>
+    <div  class="container-fluid">
+    <p><h4 style="bg-success" class="text-primary"> Asignacion de Tutor a Proyectos Productivos</h4></p>
+    </div>
+    </section>
+    <hr style="   border-width: 3px; dorder:solid;" class="bg-danger">
+<!--**********************************************************************************************************************************************************************************-->
+<section>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-4">
+            
+            <form action="<?php echo  base_url();?>index.php/c_asignacion_proyecto/pro_tutor" method="POST">
+                <div class="form-group">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <p><h5> <b> Proyectos Productivos Disponibles</b></h5></p>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <select   name="id_proyecto" class="form-control"> 
+                                <?php 
+                                    foreach ($proyecto as $proyecto) { 
+	                            ?>
+                                    <option value="<?php echo $proyecto->id_proyecto;?>"><?php echo $proyecto->nombre_proyecto ." - > "." (".$proyecto->descripcion_proyecto .")";?></option>
+                                <?php
+                                    }
+                                ?>
+                            </select>              
+                        </div>
+                        
+                    </div>
+                    <hr>
+                   
+                    <h5 class="card-title"> <b>Tutor a Asignar <small>(tutores Disponibles)</small>   </b></h5>
+                    <div class="row">
+                                    <div class="col-md-12">
+                                        
+                                        <select   name="id_tutor" class="form-control">
+                                            
+                                            <?php
+                                                foreach ($listar as $listar) { 
+	                                        ?>
+                                                <option value="<?php echo $listar->id_responsable;?>"><?php echo $listar->nombre_responsable ." - ".$listar->cedula_responsable;?></option>
+                                            <?php
+                                              }
+                                            ?>
+                                        </select>
+                                    </div>
+                                </div>
+                </div>  
+                <hr>
+                <div class="row">
+                <div class="offset-md-10 col-md-2">
+                            <input type="submit" value="Asignar" class=" btn btn-primary">
+                        </div> 
+                </div>       
+            </form>
+            </div>
+<!--/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/*/-->
+<?php
+   
+   $activ= count ($activo); 
+   $reac = count ($reacondicionamiento);
+   $plnf = count ($planificacion);
+   $paran= count ($paralizados);
+?>
+            <div class="col-md-8">
+            <section>
+    <div  class="container-fluid">
+    <p><h4 style="bg-success" class="text-primary"> Estatus de los Proyectos</h4></p>
+    </div>
+    </section>
+    <hr  class="bg-danger">
+        
+                <div class="row">
+               
+                
+                <div class="col-md-3">
+                    <div class="card text-white bg-success mb-3" >
+                        <div class="card-header"><b> <h5>Activos </h5> </b></div>
+                        <div class="card-body">
+                        <p class="card-text" ><h1 class="text-center"> <?php echo $activ;?> </h1></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-warning mb-3" >
+                        <div class="card-header"><b> <h6> acondicionamiento </h6> </b></div>
+                        <div class="card-body">
+                        <p class="card-text" ><h1 class="text-center"><?php echo $reac;?> </h1></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-danger mb-3" >
+                        <div class="card-header"><b> <h4> Planificacion </h4> </b></div>
+                        <div class="card-body">
+                        <p class="card-text" ><h1 class="text-center"> <?php echo $plnf;?> </h1></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="card text-white bg-dark mb-3" >
+                        <div class="card-header"><b> <h4> Paralizados </h4> </b></div>
+                        <div class="card-body">
+                        <p class="card-text" ><h1 class="text-center"><?php echo $paran;?> </h1></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section>
+<section>
+    <div  class="container-fluid">
+    <p><h4 style="bg-success" class="text-primary">  Listado de proyectos Asignados </h4></p>
+    </div>
+    </section>
+    <hr  class="bg-danger">
+	<div class=" col-md-12">
+    <table id="tabla"  class=" table table-bordered table-striped table-sm " style="width:100%">
+                <thead>
+                    <tr>
+                        <th style="text-align: center;" scope="col">#</th>
+                        <th style="text-align: center;" scope="col">Nombre del Proyecto</th>
+                     
+                        <th style="text-align: center;" scope="col">Descripcion de Proyecto</th>
+                        <th style="text-align: center;" scope="col">Estatus del Proyecto</th>
+                        <th style="text-align: center;" scope="col">Tutor</th>
+                  
+                        <th style="text-align: center;" scope="col">Telefono</th>
+                        <th style="text-align: center;" scope="col">Email</th>
+                       
+                       
+               
+                    </tr>
+                </thead>
+                <tbody>
+        <?php
+        
+	 	foreach ($prot as $prot) {
+	 ?>
+	  <tr>
+            <th scope="row"><?php echo $prot->id_proyecto;?></th>
+            <td><?php echo $prot->nombre_proyecto;?></td>
+            <td><?php echo $prot->descripcion_proyecto;?></td>
+            <td><?php echo $prot->estatus_proyecto;?></td>
+            <td><?php echo $prot->nombre_responsable;?></td>          
+            <td><?php echo $prot->telefono_responsable;?></td>
+            <td><?php echo $prot->email_responsable;?></td>
+           
+    </tr>
+	<?php
+	}
+	?>       
+        </tbody>
+		
+	</div>
+</div>
+</section>
+<!--**********************************************************************************************************************************************************************************-->
+
+    </div>
+    
+
+
+
+</body>
+</html>

@@ -30,7 +30,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </script>
   <script >
    
-     var nombres = ['Masculino', 'Plan Asesorate', 'Brigadas Tecnicas', 'Joven Emprendedor', 'Proyecto Ingenio'];
+     var nombres = ['Gestion Productiva', 'Plan Asesorate', 'Brigadas Tecnicas', 'Joven Emprendedor', 'Proyecto Ingenio'];
      var valores = [uno,dos,tres,cuatro,cinco];
      var generos = ['Mujeres', 'Hombres'];
      var sexo = [f,m];

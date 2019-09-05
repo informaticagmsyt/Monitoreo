@@ -75,9 +75,9 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => '192.168.2.52',
-	'username' => 'postgres',	
-	'password' => '123456',
+	'hostname' => 'localhost',
+	'username' => 'admin',	
+	'password' => 'admin123',
 	'database' => 'monitor_portal',
 	'dbdriver' => 'postgre',
 	'dbprefix' => '',

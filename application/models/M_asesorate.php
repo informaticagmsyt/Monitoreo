@@ -89,7 +89,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='10'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='24'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -97,7 +97,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='11'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='10'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -105,7 +105,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='12'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='11'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -113,7 +113,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='13'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='12'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -121,7 +121,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='14'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='13'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -129,7 +129,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='15'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='14'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -137,7 +137,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='16'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='15'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -145,7 +145,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='17'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='16'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -153,7 +153,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='18'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='17'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -161,7 +161,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='19'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='18'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -169,7 +169,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='20'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='19'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -177,7 +177,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='21'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='20'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -185,7 +185,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='22'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='21'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -193,7 +193,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='23'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='22'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -201,7 +201,7 @@ public function asesorate_amazonas(){
   $this->db->query("SELECT count ('planes.planes')");
   $this->db->from('public.personas, public.planes_personas, public.planes, public.direccion, public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND planes_personas.key_id_personas = personas.id_persona AND
-  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='24'");
+  planes.id_planes = planes_personas.key_id_planes AND direccion.estado = estados.id_estado AND planes.id_planes='2' and estados.id_estado='23'");
   $aragua = $this->db->get();
     return $aragua->result();
  }

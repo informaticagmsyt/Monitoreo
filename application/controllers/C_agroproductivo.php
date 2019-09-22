@@ -18,8 +18,19 @@ class C_agroproductivo extends CI_Controller {
 			$this->load->view('layout/navbar');
 			$this->load->view('layout/aside');
 		
-			$listar = $this->m_agro->listar_agro();
-			$this->load->view('v_agroproductivo',compact('listar'));
+			$listado = $this->m_agro->listar_agro();
+			$lista=$listado;
+			$this->load->view('v_agroproductivo',compact('listado','listar'));
 			$this->load->view('layout/footer');
+		}
+
+		public function agro()
+		{
+	
+			$listado = $this->m_agro->listar_agro();
+			
+			$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($listado));
 		}
 }

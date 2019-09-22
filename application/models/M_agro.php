@@ -244,6 +244,7 @@ public function agro_anzoategui(){
  
 public function listar_agro(){
 $this->db->select(" planes.planes,
+personas.id_persona,
   planes.id_planes, 
   personas.cedula, 
   personas.nombre, 

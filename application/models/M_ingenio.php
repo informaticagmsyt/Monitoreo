@@ -208,6 +208,7 @@ public function listar_ingenio(){
 $this->db->select("personas.cedula, 
   personas.nombre, 
   personas.apellido, 
+  personas.id_persona, 
   personas.sexo, 
   personas.f_nacimiento, 
   personas.key_estatus, 

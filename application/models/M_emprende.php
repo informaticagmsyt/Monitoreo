@@ -208,7 +208,9 @@ public function emprende_amazonas(){
 public function listar_emprende(){
 $this->db->select("planes.planes, 
   personas.cedula, 
-  personas.nombre, 
+  personas.nombre,
+  personas.id_persona,
+ 
   personas.apellido, 
   personas.sexo, 
   personas.f_nacimiento, 

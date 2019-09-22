@@ -16,8 +16,19 @@ class C_emprende extends CI_Controller {
 			$this->load->view('layout/header');
 			$this->load->view('layout/navbar');
 			$this->load->view('layout/aside');
-			$listar = $this->m_emprende->listar_emprende();
-			$this->load->view('v_emprende',compact('listar'));
+			$listado = $this->m_emprende->listar_emprende();
+			$this->load->view('v_emprende',compact('listado'));
 			$this->load->view('layout/footer');
+		}
+
+
+		public function emprende()
+		{
+	
+			$listar = $this->m_emprende->listar_emprende();
+			
+			$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($listar));
 		}
 }

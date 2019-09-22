@@ -209,8 +209,8 @@ public function asesorate_amazonas(){
  
 public function listar_asesorate(){
   $this->db->select(" personas.cedula, 
-  personas.nombre, 
-  personas.apellido, 
+  personas.nombre,   personas.apellido, 
+  personas.id_persona,
   personas.sexo, 
   personas.f_nacimiento, 
   contacto.telefono, 
@@ -255,6 +255,44 @@ public function listar_asesorate(){
 
 } 
 
+public function updatePersona($araycampos,$id){
 
+  $this->db->set($araycampos);
+  $this->db->where('id_persona', $id);
+  $query= $this->db->update('personas');
+}
+
+
+public function updateContacto($araycampos,$id){
+
+  $this->db->set($araycampos);
+  $this->db->where('id_persona_contacto', $id);
+  $query= $this->db->update('contacto');
+}
+
+
+
+public function updateDireccion($araycampos,$id){
+
+  $this->db->set($araycampos);
+  $this->db->where('id_persona_direccion', $id);
+  $query= $this->db->update('direccion');
+}
+
+
+public function updateEspacio($araycampos,$id){
+
+  $this->db->set($araycampos);
+  $this->db->where('id_persona_espacio', $id);
+  $query= $this->db->update('espacio_politico');
+}
+
+
+public function updateProfesion($araycampos,$id){
+
+  $this->db->set($araycampos);
+  $this->db->where('id_persona_laboral', $id);
+  $query= $this->db->update('laboral');
+}
 }
 ?>

@@ -16,8 +16,18 @@ class C_ingenio extends CI_Controller {
 			$this->load->view('layout/header');
 			$this->load->view('layout/navbar');
 			$this->load->view('layout/aside');
-			$listar = $this->m_ingenio->listar_ingenio();
-			$this->load->view('v_ingenio',compact('listar'));
+			$listado = $this->m_ingenio->listar_ingenio();
+			$this->load->view('v_ingenio',compact('listado'));
 			$this->load->view('layout/footer');
+		}
+
+		public function ingenio()
+		{
+	
+			$listar =  $this->m_ingenio->listar_ingenio();
+			
+			$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($listar));
 		}
 }

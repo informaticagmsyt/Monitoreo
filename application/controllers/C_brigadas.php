@@ -13,8 +13,18 @@ class C_brigadas extends CI_Controller {
 			$this->load->view('layout/header');
 			$this->load->view('layout/navbar');
 			$this->load->view('layout/aside');
-			$listar = $this->m_brigadas->listar_brigadas();
-			$this->load->view('v_brigadas',compact('listar'));
+			$listado = $this->m_brigadas->listar_brigadas();
+			$this->load->view('v_brigadas',compact('listado'));
 			$this->load->view('layout/footer');
+		}
+
+		public function brigadas()
+		{
+	
+			$listar = $this->m_brigadas->listar_brigadas();
+			
+			$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($listar));
 		}
 }

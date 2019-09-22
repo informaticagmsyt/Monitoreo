@@ -49,6 +49,8 @@ class M_productor extends CI_Model
   productor.especialidad, 
   productor.municipio, 
   productor.parroquia, 
+  personas.id_persona,
+
   productor.direccion_productor, 
   productor.p_carnet, 
   productor.v_social, 

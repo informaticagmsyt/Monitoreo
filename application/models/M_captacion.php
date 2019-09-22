@@ -14,6 +14,8 @@ class m_captacion extends CI_Model
 */
 public function listar_captacion(){
 $this->db->select(" estados.estado, 
+personas.id_persona,
+
   parroquias.parroquia, 
   municipios.municipio, 
   captacion.id_captacion, 

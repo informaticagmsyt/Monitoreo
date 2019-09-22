@@ -198,7 +198,8 @@ public function brigadas_amazonas(){
  }
 
 public function listar_brigadas(){
-	$this->db->select("planes.planes, 
+  $this->db->select("planes.planes, 
+  personas.id_persona,
   personas.cedula, 
   personas.nombre, 
   personas.apellido, 

@@ -297,5 +297,63 @@ personas.id_persona,
     return $listado->result();
 
 }
+
+
+public function buscar($id){
+  $this->db->select(" planes.planes,
+  personas.id_persona,
+    planes.id_planes, 
+    personas.cedula, 
+    personas.nombre, 
+    personas.apellido, 
+    personas.sexo, 
+    personas.f_nacimiento, 
+    direccion.localidad, 
+    direccion.nombre_localidad, 
+    direccion.direccion_exacta, 
+    estados.estado, 
+    municipios.municipio, 
+    parroquias.parroquia, 
+    planes_personas.fecha_registro, 
+    espacio_politico.e_social, 
+    espacio_politico.n_social, 
+    espacio_politico.movimiento, 
+    planes.id_planes, 
+    contacto.telefono, 
+    contacto.email, 
+    figura_juridica.r_social, 
+    laboral.grado_instruccion, 
+    laboral.profesion_oficio, 
+    laboral.trabaja, 
+    solicitud.t_asesoramiento, 
+    solicitud.t_solicitud");
+    $this->db->from('public.personas, 
+    public.planes, 
+    public.planes_personas, 
+    public.direccion, 
+    public.estados, 
+    public.municipios, 
+    public.parroquias, 
+    public.espacio_politico, 
+    public.contacto, 
+    public.figura_juridica, 
+    public.laboral, 
+    public.solicitud');
+    $this->db->where( "personas.id_persona = planes_personas.key_id_personas AND
+    personas.id_persona = direccion.id_persona_direccion AND
+    personas.id_persona = contacto.id_persona_contacto AND
+    personas.id_persona = figura_juridica.id_persona_figura AND
+    personas.id_persona = laboral.id_persona_laboral AND
+    personas.id_persona = solicitud.id_persona_solicitud AND
+    planes.id_planes = planes_personas.key_id_planes AND
+    direccion.estado = estados.id_estado AND
+    direccion.municipio = municipios.id_municipio AND
+    direccion.parroquia = parroquias.id_parroquia AND
+    direccion.id_persona_direccion = espacio_politico.id_persona_espacio ");
+    $this->db->where('personas.id_persona',$id );
+    $listado = $this->db->get();
+      return $listado->result();
+  
+  }
 }
 ?>

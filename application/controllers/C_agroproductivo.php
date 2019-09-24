@@ -33,4 +33,21 @@ class C_agroproductivo extends CI_Controller {
 			->set_content_type('application/json')
 			->set_output(json_encode($listado));
 		}
+
+		
+		public function editar()
+		{
+			$id = $this->uri->segment(3);
+			$listado = $this->m_agro->buscar($id);
+		
+			$lista=$listado;
+			$this->load->view('layout/header');
+			$this->load->view('layout/navbar');
+			$this->load->view('layout/aside');
+	
+		 
+			
+			$this->load->view('editar',compact('listado'));
+			$this->load->view('layout/footer');
+		}
 }

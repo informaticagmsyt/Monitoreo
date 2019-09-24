@@ -69,69 +69,35 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                     </tr>
                                     </thead>
-
-                                    <tbody>
-                                        <?php
-
-                                        foreach ($listado as $listar) {
-                                        
-                                           
-                                           ?>
-
-                                            <tr>
-                                                <th scope="row"><?php echo $listar->cedula; ?></th>
-                                                <td> <input name="nombre" id="nombre<?php echo $listar->id_persona ?>" class="form-control editable<?php echo $listar->id_persona ?>" value=" <?php echo strtolower($listar->nombre); ?>" disabled></td>
-                                                <td> <input name="apellido" id="apellido<?php echo $listar->id_persona ?>" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->apellido); ?> " disabled></td>
-                                                <td>
-
-                                                    <select class="form-control  editable<?php echo $listar->id_persona ?>" id="sexo<?php echo $listar->id_persona ?>" disabled>
-                                                        <option value=""> </option>
-
-                                                        <option value="M" > Masculino </option>
-                                                        <option value="F" > Femenino</option>
-                                                    </select>
-
-                                                <td> <input id="fecha_nac<?php echo $listar->id_persona ?>" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->f_nacimiento); ?>" disabled></td>
-                                                <td> <input id="telefono<?php echo $listar->id_persona ?>" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->telefono); ?>" disabled></td>
-                                                <td> <input id="email<?php echo $listar->id_persona ?>" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->email); ?>" disabled></td>
-                                                <td> <?php echo strtolower($listar->estado); ?></td>
-                                                <td> <?php echo strtolower($listar->municipio); ?></td>
-                                                <td><?php echo strtolower($listar->parroquia); ?></td>
-                                                <td> <input id="localidad<?php echo $listar->id_persona ?>" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->nombre_localidad); ?>" disabled></td>
-                                                <td> <input id="direccion<?php echo $listar->id_persona ?>" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->direccion_exacta); ?>" disabled></td>
-                                                <td> <input id="espacio<?php echo $listar->id_persona ?>" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->e_social); ?>" disabled></td>
-                                                <td> <input id="movimiento<?php echo $listar->id_persona ?>" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->movimiento); ?>" disabled></td>
-                                                <td>
-
-
-                                                    <select class="form-control editable<?php echo $listar->id_persona ?> " id="grado<?php echo $listar->id_persona ?>" disabled name="g_instruccion<?php echo $listar->id_persona ?>" required="">
-                                                        <option value="">Selecione</option>
-                                                        <option value="PRIMARIA">Primaria</option>
-                                                        <option value="BASICA">Basica</option>
-                                                        <option value="BACHILLER">Bachiller</option>
-                                                        <option value="TECNICA">Tecnica</option>
-                                                        <option value="UNIVERSITARIA">Universitaria</option>
-                                                    </select>
-
-
-                                                </td>
-                                                <td> <input id="profesion<?php echo $listar->id_persona ?>" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->profesion_oficio); ?>" disabled></td>
-                                                <td>
-                                                    <select class="form-control  editable<?php echo $listar->id_persona ?>" id="trabaja<?php echo $listar->id_persona ?>" disabled>
-                                                        <option value="">Seleccione</option>
-                                                        <option value="No">No</option>
-                                                        <option value="Si">Si</option>
-                                                    </select>
-
-
-                                                </td>
-                                                <td> <?php echo strtolower($listar->planes); ?> </td>
-                                                <td> <button id="btnEditar<?php echo $listar->id_persona ?>" onclick="editar('<?php echo $listar->id_persona ?>')" data-editable="false" data-id="<?php echo $listar->id_persona ?>" class="btn-sm btn-primary btnEditar"> <i class="material-icons" id="icon<?php echo $listar->id_persona ?>">create</i></button> </td>
-
-                                            <?php
-
-                                            }
-                                            ?>
+                                    <tbody class="normal">  
+                                                <?php
+                                    foreach ($listado as $listar) {
+                                ?>
+                                  <tr>
+                                        <th scope="row"><?php echo $listar->cedula;?></th>
+                                        <td><?php echo strtolower($listar->nombre);?></td>
+                                        <td><?php echo strtolower($listar->apellido);?></td>
+                                        <td><?php echo strtolower($listar->sexo);?></td>
+                                        <td><?php echo strtolower($listar->f_nacimiento);?></td>
+                                        <td><?php echo strtolower($listar->telefono);?></td>
+                                        <td><?php echo strtolower($listar->email);?></td>
+                                        <td><?php echo strtolower($listar->estado);?></td>
+                                        <td><?php echo strtolower($listar->municipio);?></td>
+                                        <td><?php echo strtolower($listar->parroquia);?></td>
+                                        <td><?php echo strtolower($listar->nombre_localidad);?></td>
+                                        <td><?php echo strtolower($listar->direccion_exacta);?></td>
+                                        <td><?php echo strtolower($listar->e_social);?></td>
+                                        <td><?php echo strtolower($listar->movimiento);?></td>
+                                        <td><?php echo strtolower($listar->grado_instruccion);?></td>
+                                        <td><?php echo strtolower($listar->profesion_oficio);?></td>
+                                        <td><?php echo strtolower($listar->trabaja);?></td>
+                                        <td><?php echo strtolower($listar->planes);?></td>
+                                        <td> <button id="btnEditar<?php echo $listar->id_persona ?>" onclick="ireditar('<?php echo $listar->id_persona ?>')" data-editable="false" data-id="<?php echo $listar->id_persona ?>" class="btn-sm btn-primary btnEditar"> <i class="material-icons" id="icon<?php echo $listar->id_persona ?>">create</i></button> </td>
+                                <?php
+                                }
+                                ?>
+                                                
+                                              
                                     </tbody>
                                 </table>
                             </div>

@@ -1,41 +1,37 @@
+
+      function  ireditar(id){
+        var url = urlBase + "index.php/C_agroproductivo/editar/"+id;
+
+        location.href=url;
+      }
+
+
 function editar(id) {
     
     var editable=$("#btnEditar"+id).data('editable');
 
-    if(editable=='true'){
-        $(".editable"+id).prop("disabled", true);
-        $("#btnEditar"+id).data('editable','false');
 
-
-        $("#icon"+id).text('create');
+      
 
         var dataform ={
             id:id,
-            nombre:$("#nombre"+id).val(),
-            apellido:$("#apellido"+id).val(),
-            sexo:$("#sexo"+id).val(),
-            fecha_nac:$("#fecha_nac"+id).val(),
-            telefono:$("#telefono"+id).val(),
-            localidad:$("#localidad"+id).val(),
-            direccion:$("#direccion"+id).val(),
-            espacio:$("#espacio"+id).val(),
-            movimiento:$("#movimiento"+id).val(),
-            trabaja:$("#trabaja"+id).val(),
-            email:$("#email"+id).val(),
-            grado:$("#grado"+id).val(),
-            profesion:$("#profesion"+id).val(),
+            nombre:$("#nombre").val(),
+            apellido:$("#apellido").val(),
+            sexo:$("#sexo").val(),
+            fecha_nac:$("#fecha_nac").val(),
+            telefono:$("#telefono").val(),
+            localidad:$("#localidad").val(),
+            direccion:$("#direccion").val(),
+            espacio:$("#espacio").val(),
+            movimiento:$("#movimiento").val(),
+            trabaja:$("#trabaja").val(),
+            email:$("#email").val(),
+            grado:$("#grado").val(),
+            profesion:$("#oficio").val(),
 
         }
         guradar(dataform)
 
-    }else{
-
-        $(".editable"+id).prop("disabled", false);
-        $("#btnEditar"+id).data('editable','true')
-        $("#icon"+id).text('save');
- 
-
-           }
 }
 
 
@@ -47,6 +43,7 @@ function guradar(data){
         data: data
       })
         .done(function( resp ) {
+            alert(resp.response)
          console.log(resp)
         }).fail(function(error){
 

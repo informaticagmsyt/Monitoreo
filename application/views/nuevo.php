@@ -2,7 +2,7 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 
-$listar=$listado[0]; 
+
 ?>
 
 <body class="theme-red">
@@ -30,7 +30,7 @@ $listar=$listado[0];
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Editar
+                                Nuevo
                             </h2>
 
                        
@@ -45,7 +45,7 @@ $listar=$listado[0];
                                         </span>
                                         <div class="form-line">
                                             <input type="text" class="form-control" name="nombre" placeholder="nombre" id="nombre"
-                                            required autofocus value="<?php echo strtolower($listar->nombre); ?>">
+                                            required autofocus value="">
                                         </div>
                                     </div>
                                 </div>
@@ -57,7 +57,7 @@ $listar=$listado[0];
                                         </span>
                                         <div class="form-line">
                                             <input type="text" class="form-control" name="apellido"  id="apellido"
-                                            placeholder="apellido" required value="<?php echo $listar->apellido; ?>">
+                                            placeholder="apellido" required value="">
                                  </div>
 
                                  
@@ -70,7 +70,7 @@ $listar=$listado[0];
                                             <i class="material-icons"></i>Sexo
                                         </span>
                                         <div class="form-line">
-                                            <select class="form-control  editable<?php echo $listar->id_persona ?>" id="sexo" >
+                                            <select class="form-control  editable" id="sexo" >
                                                 <option value=""> </option>
 
                                                 <option value="M" > Masculino </option>
@@ -97,7 +97,7 @@ $listar=$listado[0];
                                             <i class="material-icons"></i>Fecha Nacimiento
                                         </span>
                                         <div class="form-line">
-                                            <input id="fecha_nac" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->f_nacimiento); ?>" >
+                                            <input id="fecha_nac" class="form-control editable " value="" >
                                  </div>
 
                                  
@@ -111,7 +111,7 @@ $listar=$listado[0];
                                             <i class="material-icons"></i>Telefono
                                         </span>
                                         <div class="form-line">
-                                            <input id="telefono" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->telefono); ?>" >
+                                            <input id="telefono" class="form-control editable " value="" >
                                  </div>
 
                                  
@@ -125,7 +125,7 @@ $listar=$listado[0];
                                             <i class="material-icons"></i>Email
                                         </span>
                                         <div class="form-line">
-                                            <input id="email" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->email); ?>" >
+                                            <input id="email" class="form-control editable " value="" >
                                  </div>
 
                                  
@@ -215,7 +215,7 @@ $listar=$listado[0];
                                             <i class="material-icons"></i>Localidad
                                         </span>
                                         <div class="form-line">
-                                            <input id="localidad" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->nombre_localidad); ?>" >
+                                            <input id="localidad" class="form-control editable " value="" >
                                  </div>
 
                                  
@@ -229,7 +229,7 @@ $listar=$listado[0];
                                             <i class="material-icons"></i>Direccion
                                         </span>
                                         <div class="form-line">
-                                            <input id="direccion" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->direccion_exacta); ?>" >
+                                            <input id="direccion" class="form-control editable" value="" >
                                  </div>
 
                                  
@@ -243,7 +243,7 @@ $listar=$listado[0];
                                             <i class="material-icons"></i>Espacio Social
                                         </span>
                                         <div class="form-line">
-                                            <input id="espacio" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->e_social); ?>" >
+                                            <input id="espacio" class="form-control editable" value="" >
                                  </div>
 
                                  
@@ -265,7 +265,7 @@ $listar=$listado[0];
                                             <i class="material-icons"></i>Movimiento
                                         </span>
                                         <div class="form-line">
-                                            <input id="movimiento" class="form-control editable<?php echo $listar->id_persona ?> " value="<?php echo strtolower($listar->movimiento); ?>" >
+                                            <input id="movimiento" class="form-control editable" value="" >
                                  </div>
 
                                  
@@ -300,7 +300,7 @@ $listar=$listado[0];
                                             <i class="material-icons"></i>Oficio
                                         </span>
                                         <div class="form-line">
-                                            <input id="oficio" class="form-control  " value="<?php echo strtolower($listar->profesion_oficio);?>" >
+                                            <input id="oficio" class="form-control  " value="" >
                                  </div>
 
                                  
@@ -344,7 +344,7 @@ $listar=$listado[0];
                                             <i class="material-icons"></i>Pertenece
                                         </span>
                                         <div class="form-line">
-                                            <input id="oficio" class="form-control  " value="<?php echo strtolower($listar->planes); ?> " disabled >
+                                            <input id="oficio" class="form-control  " value=" "  >
                                  </div>
 
                                  
@@ -357,7 +357,7 @@ $listar=$listado[0];
                             <div class="row">
                                     <div class="col-md-4"></div>
                                 <div class="col-md-4">
-                                    <button id="btnEditar<?php echo $listar->id_persona ?>" onclick="editar('<?php echo $listar->id_persona ?>')" data-editable="false" data-id="<?php echo $listar->id_persona ?>" class="btn-sm btn-primary btnEditar"> <i class="material-icons" id="icon<?php echo $listar->id_persona ?>">save</i></button>
+                                    <button id="btnEditar" onclick="" data-editable="false" data-id="">save</i></button>
 
                                 </div>
                             </div>
@@ -369,71 +369,7 @@ $listar=$listado[0];
         </div>
         </div>
     </section>
-    <script src="<?= base_url() ?>public/plugins/jquery/jquery.min.js"></script>
  
     <script>
 
-var estados ="<?php echo $listar->id_estado;?>";
-var municipios ="<?php echo $listar->id_municipio;?>" ;
- var parroquias="<?php echo $listar->id_parroquia;?>"; 
- 
-        var lista = '<?php echo json_encode($listado) ?>';
-
-
-        var dataasesorate = '';
-        //dataasesorate=JSON.parse(lista);
-
-        $(document).ready(function() {
-
-            $('#editar').change(function() {
-        if(this.checked) {
-          
-        }
-             
-    });
-            var url = urlBase + "index.php/C_asesorate/asesorate";
-            $.ajax({
-                    method: "get",
-                    url: url,
-
-                })
-                .done(function(resp) {
-
-                    if (resp.length > 0)
-                        resp.forEach(element => {
-
-                            //  if(element.grado_instruccion.length != 0 || element.grado_instruccion.length != null)
-                            if (document.getElementById('grado' )) {
-
-
-
-                                setValueSelect('grado' , element.grado_instruccion.trim())
-                            }
-
-                            if (document.getElementById('sexo' )) {
-                                // $(`#sexo${element.id_persona} select`).val(element.sexo);
-
-                                setValueSelect('sexo' , element.sexo.trim())
-                            }
-
-                            if (document.getElementById('trabaja')) {
-                                //$(`#profesion${element.id_persona} select`).val(element.trabaja);
-
-
-                                setValueSelect('trabaja' , element.trabaja.trim())
-                            }
-
-                        });
-
-                }).fail(function(error) {
-
-                    console.log(error)
-                });
-
-
-
-
-
-
-        });
     </script>

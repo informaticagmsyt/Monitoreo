@@ -28,6 +28,9 @@ function editar(id) {
             email:$("#email").val(),
             grado:$("#grado").val(),
             profesion:$("#oficio").val(),
+            id_estado:$("#estadoe").val(),
+		   id_municipio:$("#municipio_id").val(),
+		 id_parroquia:$("#parroquia_id").val()
 
         }
         guradar(dataform)
@@ -47,7 +50,7 @@ function guradar(data){
          console.log(resp)
         }).fail(function(error){
 
-            console.log(error)
+            console.log(error.responseText)
         });
 }
 

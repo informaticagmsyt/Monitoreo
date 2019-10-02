@@ -41,9 +41,9 @@ class C_asesorate extends CI_Controller {
 			$id=$_POST['id'];
 			$telefono=$_POST['telefono'];
 			$email=$_POST['email'];
-			$localidad=$_POST['localidad'];
-			$direccion=$_POST['direccion'];
+	
 
+			
 			$movimiento=$_POST['movimiento'];
 			$espacio=$_POST['espacio'];
 			$this->m_asesorate->updatePersona(array("nombre"=>$nombre,"apellido"=>$apellido,"sexo"=>
@@ -51,8 +51,12 @@ class C_asesorate extends CI_Controller {
 
 			$this->m_asesorate->updateContacto(array("telefono"=>$telefono,"email"=>$email),$id);
 		
-			$this->m_asesorate->updateDireccion(array("nombre_localidad"=>$localidad,
-													"direccion_exacta"=>$direccion),$id);
+			$this->m_asesorate->updateDireccion(array(
+				"estado"=>$_POST['id_estado'],
+				"municipio"=>$_POST['id_municipio'],
+				"parroquia"=>$_POST['id_parroquia'],
+				"nombre_localidad"=>$_POST['localidad'],
+													"direccion_exacta"=>$_POST['direccion']),$id);
 			$this->m_asesorate->updateEspacio(array("movimiento"=>$movimiento,
 													"e_social"=>$espacio),$id);
 

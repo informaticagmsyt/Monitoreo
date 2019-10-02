@@ -56,6 +56,8 @@
                                     <li>
                                         <a href="<?= base_url('index.php/c_agroproductivo');?>">Listado General de Registros</a>
                                     </li>
+
+                                    
                             <?php endif ?>
 
                             <?php if ($this->session->userdata('nivel_usuario') =='2' || $this->session->userdata('nivel_usuario')=='3' || $this->session->userdata('nivel_usuario')=='4' ) : ?>
@@ -119,6 +121,8 @@
                             <i class="material-icons">assignment</i>
                             <span>Joven Emprendedor</span>
                         </a>
+
+                       
                         <ul class="ml-menu">
                             <?php if ($this->session->userdata('nivel_usuario') =='2' || $this->session->userdata('nivel_usuario')=='3' || $this->session->userdata('nivel_usuario')=='4'): ?>
                                  <li>
@@ -135,7 +139,8 @@
                            <?php endif ?>
                         </ul>
                     </li>
-
+                    
+                    
                      <li>
                         <a href="javascript:void(0);" class="menu-toggle">
                             <i class="material-icons">assignment</i>
@@ -159,6 +164,12 @@
 
                         </ul>
                     </li>
+                    <li>
+                    <a href="<?= base_url('index.php/NuevoRegistro');?>" class="menu-toggle">
+                            <i class="material-icons">assignment</i>
+                            <span>Nuevo Registro</span>
+                        </a>
+                        </li>
                     <?php if ($this->session->userdata('nivel_usuario') =='2' || $this->session->userdata('nivel_usuario')=='3' || $this->session->userdata('nivel_usuario')=='4' ) : ?>
                         <li>
                         <a href="javascript:void(0);" class="menu-toggle">

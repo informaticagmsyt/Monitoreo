@@ -50,4 +50,15 @@ class C_agroproductivo extends CI_Controller {
 			$this->load->view('editar',compact('listado'));
 			$this->load->view('layout/footer');
 		}
+
+			
+		public function getPlanes()
+		{
+			$listado = $this->m_agro->getPlanes();
+			$this->output
+			->set_content_type('application/json')
+			->set_output(json_encode($listado));
+		}
+
+		
 }

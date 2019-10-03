@@ -63,6 +63,7 @@ class C_asesorate extends CI_Controller {
 		$this->m_asesorate->updateProfesion(array(
 		"grado_instruccion"=>$_POST['grado'],"trabaja"=>$_POST['trabaja'],"profesion_oficio"=>$_POST['profesion']),$id);
 
+		$this->m_asesorate->updatePlanes(['key_id_planes'=>$_POST['id_planes']],$id);
 
 				
 		$this->output

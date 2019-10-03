@@ -261,17 +261,24 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='19'");
+  direccion.estado = estados.id_estado AND estados.id_estado='18'");
   $aragua = $this->db->get();
     return $aragua->result();
  }
+
+ 
+
+
   public function listado_tachira(){
-  $this->db->query("SELECT COUNT(*)");
-  $this->db->from('public.personas, 
-  public.direccion, 
-  public.estados');
-  $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='20'");
+  $this->db->select(" count(estado)");
+  $this->db->from('direccion');
+  $this->db->join('planes_personas',
+  'key_id_personas=id_persona_direccion','inner');
+  $this->db->where("estado",19);
+
+
+
+
   $aragua = $this->db->get();
     return $aragua->result();
  }

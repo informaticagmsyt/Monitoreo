@@ -294,5 +294,11 @@ public function updateProfesion($araycampos,$id){
   $this->db->where('id_persona_laboral', $id);
   $query= $this->db->update('laboral');
 }
+public function updatePlanes($araycampos,$id){
+
+  $this->db->set($araycampos);
+  $this->db->where('key_id_personas', $id);
+  $query= $this->db->update('planes_personas');
+}
 }
 ?>

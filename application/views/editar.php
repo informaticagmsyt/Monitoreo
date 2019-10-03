@@ -339,16 +339,21 @@ $listar=$listado[0];
 
                                    
                                 <div class=" col-md-4">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons"></i>Pertenece
-                                        </span>
-                                        <div class="form-line">
-                                            <input id="oficio" class="form-control  " value="<?php echo strtolower($listar->planes); ?> " disabled >
-                                 </div>
 
-                                 
-                                    </div>
+                                        <div class="input-group">
+                                                <span class="input-group-addon">
+                                                    <i class="material-icons"></i>Planes
+                                                </span>
+                                                <div class="form-line">
+                                                    <select class="form-control editable> " id="planes"  name="planes" required="">
+                                                      
+                                                    </select>
+                                         </div>
+        
+                                         
+                                            </div>
+
+                               
                                 </div>
 
                                    
@@ -372,6 +377,7 @@ $listar=$listado[0];
     <script src="<?= base_url() ?>public/plugins/jquery/jquery.min.js"></script>
  
     <script>
+var idplanes ="<?php echo $listar->id_planes;?>";
 
 var estados ="<?php echo $listar->id_estado;?>";
 var municipios ="<?php echo $listar->id_municipio;?>" ;

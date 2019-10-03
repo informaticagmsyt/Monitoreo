@@ -6,6 +6,8 @@
       }
 
 
+
+
 function editar(id) {
     
     var editable=$("#btnEditar"+id).data('editable');
@@ -29,7 +31,8 @@ function editar(id) {
             grado:$("#grado").val(),
             profesion:$("#oficio").val(),
             id_estado:$("#estadoe").val(),
-		   id_municipio:$("#municipio_id").val(),
+       id_municipio:$("#municipio_id").val(),
+       id_planes:$("#planes").val(),
 		 id_parroquia:$("#parroquia_id").val()
 
         }
@@ -61,3 +64,45 @@ function setValueSelect(SelectId, Value) {
 		if (SelectObject[index].value == Value) SelectObject.selectedIndex = index;
 	}
 }
+if(idplanes)
+planes(idplanes);
+
+function planes(planes) {
+
+  var data={
+    
+  }
+  
+  $.ajax({
+    url: urlBase+"index.php/C_agroproductivo/getPlanes" ,
+    type: "GET",
+    dataType: "JSON",
+    data: data,
+    success: function(res) {
+      console.log(res)
+
+  if(res){
+ var data =res;
+
+ var html='';
+
+   for (var i in data) {
+
+       html='<option value='+data[i].id_planes+'>'+data[i].planes+'</option>';
+       $("#planes").append(html)
+   }
+   setValueSelect("planes", planes) 
+
+   
+  }
+  
+  
+  
+  
+    }
+      }).fail(function(re){
+  console.log(re.responseText)
+      
+      });
+  
+  }

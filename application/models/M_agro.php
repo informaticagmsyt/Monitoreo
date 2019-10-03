@@ -358,5 +358,12 @@ public function buscar($id){
       return $listado->result();
   
   }
+
+  public function getPlanes(){
+    $this->db->select("*");
+    $this->db->from('public.planes');
+    $listado = $this->db->get();
+      return $listado->result();
+  }
 }
 ?>

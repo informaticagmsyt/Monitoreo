@@ -270,7 +270,7 @@ $agro_distrito      = count($agro_distrito );
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>DASHBOARD</h2>
+                <h2>TABLERO</h2>
             </div>
             <!-- Widgets -->
             <div class="row clearfix">
@@ -1236,7 +1236,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $monagas?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $monagas;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1295,7 +1295,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $esparta?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $esparta;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1354,7 +1354,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $portuguesa?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $portuguesa;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1413,7 +1413,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $sucre?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $sucre;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1472,7 +1472,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $tachira?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $tachira;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1531,7 +1531,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $trujillo?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $trujillo;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1590,7 +1590,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $vargas?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $vargas;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1649,7 +1649,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $yaracuy?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $yaracuy;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1708,7 +1708,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $zulia?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $zulia;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>

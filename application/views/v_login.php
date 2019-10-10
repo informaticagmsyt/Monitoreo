@@ -11,7 +11,7 @@ bg-light-blue">
 						<body >
 						    <div class="login-box">
 						        <div class="logo">
-						            <h1  class="text-center " style="font-family: 'Satisfy', cursive;">  Bienvenidos al Sistema de Monitoreo de Milicianos Registrados en la Gran Mision Saber y Trabajo. </h1>
+						            <h1  class="text-center " style="font-family: 'Satisfy', cursive;">  Bienvenidos al Sistema de Monitoreo de Registrados en los Planes Socio-Productivos de la Gran Mision Saber y Trabajo. </h1>
 						        </div>
 						        <br><br><br>
 						        <div class="card">

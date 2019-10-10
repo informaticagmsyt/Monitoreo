@@ -36,6 +36,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                        
                        
                         </div>
+                        <form id="nuevoRegistro">
                         <div class="body">
                             <div class="row">
                                 <div class="col-md-4">
@@ -64,6 +65,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                     </div>
                                 </div>
 
+                                
+
+                                <div class=" col-md-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons"></i>Fecha Nacimiento
+                                        </span>
+                                        <div class="form-line">
+                                            <input id="fecha_nac" class="form-control editable " value="" >
+                                 </div>
+
+                                 
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                                <div class="row">
                                 <div class=" col-md-4">
                                     <div class="input-group">
                                         <span class="input-group-addon">
@@ -81,7 +100,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                  
                                     </div>
                                 </div>
+                                <div class=" col-md-4">
+                                    <div class="input-group">
+                                        <span class="input-group-addon">
+                                            <i class="material-icons"></i>Cedula
+                                        </span>
+                                        <div class="form-line">
+                                            <input type="text" class="form-control" name="cedula"  id="cedula"
+                                            placeholder="cedula" required value="">
+                                 </div>
 
+                                 
+                                    </div>
+                                </div>
+                            </div>
                           
 
                             </div>
@@ -90,21 +122,6 @@ defined('BASEPATH') or exit('No direct script access allowed');
                         
 
                          
-
-                                <div class=" col-md-4">
-                                    <div class="input-group">
-                                        <span class="input-group-addon">
-                                            <i class="material-icons"></i>Fecha Nacimiento
-                                        </span>
-                                        <div class="form-line">
-                                            <input id="fecha_nac" class="form-control editable " value="" >
-                                 </div>
-
-                                 
-                                    </div>
-                                </div>
-
-                                
                                 <div class=" col-md-4">
                                     <div class="input-group">
                                         <span class="input-group-addon">
@@ -357,17 +374,20 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <div class="row">
                                     <div class="col-md-4"></div>
                                 <div class="col-md-4">
-                                    <button id="btnEditar" onclick="" data-editable="false" data-id="">save</i></button>
+                                <button class="btn btn-block bg-pink waves-effect" type="submit">Registrar</button>
 
                                 </div>
                             </div>
 
                         </div>
+
+                        </form>
                     </div>
                 </div>
             </div>
         </div>
         </div>
+
     </section>
  
     <script>

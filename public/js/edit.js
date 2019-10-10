@@ -6,7 +6,23 @@
       }
 
 
+function eliminar(id){
+  var url=urlBase+"index.php/C_asesorate/eliminar";
+  $.ajax({
+      method: "POST",
+      url: url,
+      data: {"id":id}
+    })
+      .done(function( resp ) {
+          alert(resp.response)
+          location.reload();
+       console.log(resp)
+      }).fail(function(error){
 
+          console.log(error.responseText)
+      });
+
+}
 
 function editar(id) {
     

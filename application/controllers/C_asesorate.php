@@ -71,4 +71,14 @@ class C_asesorate extends CI_Controller {
 		->set_output(json_encode(array("response"=>"Datos guardados")));										
 
 		}
+
+		public function eliminar(){
+
+			$this->m_asesorate->eliminar($_POST['id']);
+
+							
+		$this->output
+		->set_content_type('application/json')
+		->set_output(json_encode(array("response"=>"Registro eliminado")));	
+		}
 }

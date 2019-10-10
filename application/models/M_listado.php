@@ -18,7 +18,7 @@ public function get_municipio_query($id_estado){
         return $stado->result();
 }
 public function listado_estatus(){
-    $this->db->query("SELECT COUNT('*')");
+    $this->db->query("SELECT COUNT(*)");
     $this->db->from('estatus');
     $contar = $this->db->get();
       return $contar->result();
@@ -92,8 +92,8 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='2'");
-  $amazonas = $this->db->get();
-    return $amazonas->result();
+  $anzoategui = $this->db->get();
+    return $anzoategui->result();
  }
  public function listado_apure(){
   $this->db->query("SELECT COUNT(*)");
@@ -102,8 +102,8 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='3'");
-  $amazonas = $this->db->get();
-    return $amazonas->result();
+  $apure = $this->db->get();
+    return $apure->result();
  }
  public function listado_aragua(){
   $this->db->query("SELECT COUNT(*)");
@@ -122,8 +122,8 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='5'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  $barinas = $this->db->get();
+    return $barinas->result();
  }
   public function listado_bolivar(){
   $this->db->query("SELECT COUNT(*)");
@@ -132,8 +132,8 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='6'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  $bolivar = $this->db->get();
+    return $bolivar->result();
  }
   public function listado_carabobo(){
   $this->db->query("SELECT COUNT(*)");
@@ -142,8 +142,8 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='7'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  $carabobo = $this->db->get();
+    return $carabobo->result();
  }
    public function listado_cojedes(){
   $this->db->query("SELECT COUNT(*)");
@@ -152,8 +152,8 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='8'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  $cojedes = $this->db->get();
+    return $cojedes->result();
  }
     public function listado_delta(){
   $this->db->query("SELECT COUNT(*)");
@@ -162,8 +162,8 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='9'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  $delta = $this->db->get();
+    return $delta->result();
  }
   public function listado_distrito(){
   $this->db->query("SELECT COUNT(*)");
@@ -171,9 +171,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='10'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='24'");
+  $distrito = $this->db->get();
+    return $distrito->result();
  }
   public function listado_falcon(){
   $this->db->query("SELECT COUNT(*)");
@@ -181,9 +181,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='11'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='10'");
+  $falcon = $this->db->get();
+    return $falcon->result();
  }
    public function listado_guarico(){
   $this->db->query("SELECT COUNT(*)");
@@ -191,9 +191,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='12'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='11'");
+  $guarico = $this->db->get();
+    return $guarico->result();
  }
  public function listado_lara(){
   $this->db->query("SELECT COUNT(*)");
@@ -201,9 +201,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='13'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='12'");
+  $lara = $this->db->get();
+    return $lara->result();
  }
  public function listado_merida(){
   $this->db->query("SELECT COUNT(*)");
@@ -211,9 +211,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='14'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='13'");
+  $merida = $this->db->get();
+    return $merida->result();
  }
   public function listado_miranda(){
   $this->db->query("SELECT COUNT(*)");
@@ -221,9 +221,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='15'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='14'");
+  $miranda = $this->db->get();
+    return $miranda->result();
  }
  public function listado_monagas(){
   $this->db->query("SELECT COUNT(*)");
@@ -231,9 +231,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='16'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='15'");
+  $monagas = $this->db->get();
+    return $monagas->result();
  }
   public function listado_esparta(){
   $this->db->query("SELECT COUNT(*)");
@@ -241,9 +241,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='17'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='16'");
+  $esparta = $this->db->get();
+    return $esparta->result();
  }
   public function listado_portuguesa(){
   $this->db->query("SELECT COUNT(*)");
@@ -251,9 +251,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='18'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='17'");
+  $portuguesa = $this->db->get();
+    return $portuguesa->result();
  }
   public function listado_sucre(){
   $this->db->query("SELECT COUNT(*)");
@@ -262,8 +262,8 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='18'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  $sucre = $this->db->get();
+    return $sucre->result();
  }
 
  
@@ -279,8 +279,8 @@ public function listado_anzoategui(){
 
 
 
-  $aragua = $this->db->get();
-    return $aragua->result();
+  $tachira = $this->db->get();
+    return $tachira->result();
  }
  public function listado_trujillo(){
   $this->db->query("SELECT COUNT(*)");
@@ -288,9 +288,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='21'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='20'");
+  $trujillo = $this->db->get();
+    return $trujillo->result();
  }
  public function listado_vargas(){
   $this->db->query("SELECT COUNT(*)");
@@ -298,9 +298,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='22'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='21'");
+  $vargas = $this->db->get();
+    return $vargas->result();
  }
  public function listado_yaracuy(){
   $this->db->query("SELECT COUNT(*)");
@@ -308,9 +308,9 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='23'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='22'");
+  $yaracuy = $this->db->get();
+    return $yaracuy->result();
  }
  public function listado_zulia(){
   $this->db->query("SELECT COUNT(*)");
@@ -318,8 +318,8 @@ public function listado_anzoategui(){
   public.direccion, 
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
-  direccion.estado = estados.id_estado AND estados.id_estado='24'");
-  $aragua = $this->db->get();
-    return $aragua->result();
+  direccion.estado = estados.id_estado AND estados.id_estado='23'");
+  $zulia = $this->db->get();
+    return $zulia->result();
  }}
 ?>

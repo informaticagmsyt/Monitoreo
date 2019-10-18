@@ -20,7 +20,9 @@ class C_agroproductivo extends CI_Controller {
 			$this->load->view('layout/aside');
 		
 			if(isset($_REQUEST['desde'] ) && isset($_REQUEST['hasta'] ) && isset($_REQUEST['id'] )){
-				$listado =	$this->MbuscarPorFecha->listar($_REQUEST['desde'],$_REQUEST['hasta'],$_REQUEST['id']);
+				$desde=date("Y-m-d", strtotime($_REQUEST['desde'])); 
+				$hasta=date("Y-m-d", strtotime($_REQUEST['hasta'])); 
+				$listado =	$this->MbuscarPorFecha->listar($desde,$hasta,$_REQUEST['id']);
 			}else{
 				$listado = $this->m_agro->listar_agro();
 			}

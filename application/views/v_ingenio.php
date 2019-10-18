@@ -6,7 +6,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <!-- Page Loader -->
     <div class="page-loader-wrapper">
         <div class="loader">
-            <div class="preloader">
+            <div class="preloader"> 
                 <div class="spinner-layer pl-red">
                     <div class="circle-clipper left">
                         <div class="circle"></div>
@@ -29,6 +29,75 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <h2>
                                 Listado de Peronas Registradas en el Programa Brigradas Tecnicas
                             </h2>
+
+                            <hr>
+
+<form action="" method="get">
+<div class="row">
+
+
+    <div class="col-md-1">
+        <div class="input-group">
+
+            <br>
+            <p>Buscar</p>
+        </div>
+
+    </div>
+    <div class="col-md-3">
+        <div class="form-group form-line">
+            <label> Desde</label>
+
+
+
+            <div class="input-group date form_date col-md-8" data-date="" data-date-format="dd-mm-yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                <span class="input-group-addon">
+                    <i class="material-icons">date_range</i>
+                </span>
+
+                <input class="form-control" size="5" type="text" id="desde" name="desde" value="<?php 	if(isset($_REQUEST['desde'] )) echo $_REQUEST['desde']  ?>">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span><i class="far fa-trash-alt"></i></span>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span><i class="far fa-calendar-alt"></i></span>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="form-group form-line">
+            <label> Hasta</label>
+
+
+
+            <div class="input-group date form_date col-md-8" data-date="" data-date-format="dd-mm-yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                <span class="input-group-addon">
+                    <i class="material-icons">date_range</i>
+                </span>
+
+                <input class="form-control" size="5" type="text" id="desde" name="hasta" value="<?php 	if(isset($_REQUEST['hasta'] )) echo $_REQUEST['hasta']  ?>">
+                <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span><i class="far fa-trash-alt"></i></span>
+                <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span><i class="far fa-calendar-alt"></i></span>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <input type="hidden" name="id" value="5">
+
+    <div class="col-md-3">
+        <div class="input-group">
+
+            <br>
+            <button type="submit" class="btn-sm btn-primary "> Buscar</i></button>
+
+        </div>
+
+    </div>
+</div>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -121,6 +190,16 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
         $(document).ready(function() {
 
+            $('.form_date').datetimepicker({
+                language: 'es',
+                weekStart: 1,
+                todayBtn: 1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0
+            });
 
             var url = urlBase + "index.php/C_ingenio/ingenio";
             $.ajax({

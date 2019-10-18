@@ -16,7 +16,15 @@ class C_asesorate extends CI_Controller {
 			$this->load->view('layout/header');
 			$this->load->view('layout/navbar');
 			$this->load->view('layout/aside');
-			$listado = $this->m_asesorate->listar_asesorate();
+			$this->load->Model('MbuscarPorFecha');
+			if(isset($_REQUEST['desde'] ) && isset($_REQUEST['hasta'] ) && isset($_REQUEST['id'] )){
+				$desde=date("Y-m-d", strtotime($_REQUEST['desde'])); 
+				$hasta=date("Y-m-d", strtotime($_REQUEST['hasta'])); 
+				$listado =	$this->MbuscarPorFecha->listar($desde,$hasta,$_REQUEST['id']);
+			}else{
+				$listado = $this->m_asesorate->listar_asesorate();
+			}
+	
 			
 			$this->load->view('v_asesorate',compact('listado'));
 			$this->load->view('layout/footer');

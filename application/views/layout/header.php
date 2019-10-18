@@ -40,4 +40,7 @@
     <link href="<?= base_url()?>public/plugins/bootstrap-select/css/bootstrap-select.css" rel="stylesheet" />
     <!-- noUISlider Css -->
     <link href="<?= base_url()?>public/plugins/nouislider/nouislider.min.css" rel="stylesheet" />    
+
+    <link href="<?= base_url()?>public/css/bootstrap-datetimepicker.css" rel="stylesheet">
+
 </head>

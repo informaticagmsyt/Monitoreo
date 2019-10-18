@@ -4,6 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 <body class="theme-red">
     <!-- Page Loader -->
+
     <div class="page-loader-wrapper">
         <div class="loader">
             <div class="preloader">
@@ -24,11 +25,82 @@ defined('BASEPATH') or exit('No direct script access allowed');
         <div class="container-fluid">
             <div class="row clearfix">
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
                     <div class="card">
                         <div class="header">
                             <h2>
                                 Listado de Peronas Registradas en el Programa Agropoductivo
                             </h2>
+                            <hr>
+
+                            <form action="" method="get">
+                            <div class="row">
+
+
+                                <div class="col-md-1">
+                                    <div class="input-group">
+
+                                        <br>
+                                        <p>Buscar</p>
+                                    </div>
+
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="form-group form-line">
+                                        <label> Desde</label>
+
+
+
+                                        <div class="input-group date form_date col-md-8" data-date="" data-date-format="dd-mm-yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">date_range</i>
+                                            </span>
+
+                                            <input class="form-control" size="5" type="text" id="desde" name="desde" value="<?php 	if(isset($_REQUEST['desde'] )) echo $_REQUEST['desde']  ?>">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span><i class="far fa-trash-alt"></i></span>
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <div class="col-md-3">
+                                    <div class="form-group form-line">
+                                        <label> Hasta</label>
+
+
+
+                                        <div class="input-group date form_date col-md-8" data-date="" data-date-format="dd-mm-yyyy" data-link-field="dtp_input2" data-link-format="yyyy-mm-dd">
+                                            <span class="input-group-addon">
+                                                <i class="material-icons">date_range</i>
+                                            </span>
+
+                                            <input class="form-control" size="5" type="text" id="desde" name="hasta" value="<?php 	if(isset($_REQUEST['hasta'] )) echo $_REQUEST['hasta']  ?>">
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span><i class="far fa-trash-alt"></i></span>
+                                            <span class="input-group-addon"><span class="glyphicon glyphicon-calendar"></span><i class="far fa-calendar-alt"></i></span>
+                                        </div>
+
+
+
+                                    </div>
+                                </div>
+
+                                <input type="hidden" name="id" value="1">
+
+                                <div class="col-md-3">
+                                    <div class="input-group">
+
+                                        <br>
+                                        <button type="submit" class="btn-sm btn-primary "> Buscar</i></button>
+
+                                    </div>
+
+                                </div>
+                            </div>
+
+</form>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
@@ -69,38 +141,38 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                                     </tr>
                                     </thead>
-                                    <tbody class="normal">  
-                                                <?php
-                                    foreach ($listado as $listar) {
-                                ?>
-                                  <tr>
-                                        <th scope="row"><?php echo $listar->cedula;?></th>
-                                        <td><?php echo strtolower($listar->nombre);?></td>
-                                        <td><?php echo strtolower($listar->apellido);?></td>
-                                        <td><?php echo strtolower($listar->sexo);?></td>
-                                        <td><?php echo strtolower($listar->f_nacimiento);?></td>
-                                        <td><?php echo strtolower($listar->telefono);?></td>
-                                        <td><?php echo strtolower($listar->email);?></td>
-                                        <td><?php echo strtolower($listar->estado);?></td>
-                                        <td><?php echo strtolower($listar->municipio);?></td>
-                                        <td><?php echo strtolower($listar->parroquia);?></td>
-                                        <td><?php echo strtolower($listar->nombre_localidad);?></td>
-                                        <td><?php echo strtolower($listar->direccion_exacta);?></td>
-                                        <td><?php echo strtolower($listar->e_social);?></td>
-                                        <td><?php echo strtolower($listar->movimiento);?></td>
-                                        <td><?php echo strtolower($listar->grado_instruccion);?></td>
-                                        <td><?php echo strtolower($listar->profesion_oficio);?></td>
-                                        <td><?php echo strtolower($listar->trabaja);?></td>
-                                        <td><?php echo strtolower($listar->planes);?></td>
-                                        <td> <button id="btnEditar<?php echo $listar->id_persona ?>" onclick="ireditar('<?php echo $listar->id_persona ?>')" data-editable="false" data-id="<?php echo $listar->id_persona ?>" class="btn-sm btn-primary btnEditar"> <i class="material-icons" id="icon<?php echo $listar->id_persona ?>">create</i></button> 
-                                        <button id="btnEliminar<?php echo $listar->id_persona ?>" onclick="eliminar('<?php echo $listar->id_persona ?>')" data-editable="false" data-id="<?php echo $listar->id_persona ?>" class="btn-sm btn-danger btnEditar"> <i class="material-icons" id="icon<?php echo $listar->id_persona ?>">delete</i></button> </td>
+                                    <tbody class="normal">
+                                        <?php
+                                        foreach ($listado as $listar) {
+                                            ?>
+                                            <tr>
+                                                <th scope="row"><?php echo $listar->cedula; ?></th>
+                                                <td><?php echo strtolower($listar->nombre); ?></td>
+                                                <td><?php echo strtolower($listar->apellido); ?></td>
+                                                <td><?php echo strtolower($listar->sexo); ?></td>
+                                                <td><?php echo strtolower($listar->f_nacimiento); ?></td>
+                                                <td><?php echo strtolower($listar->telefono); ?></td>
+                                                <td><?php echo strtolower($listar->email); ?></td>
+                                                <td><?php echo strtolower($listar->estado); ?></td>
+                                                <td><?php echo strtolower($listar->municipio); ?></td>
+                                                <td><?php echo strtolower($listar->parroquia); ?></td>
+                                                <td><?php echo strtolower($listar->nombre_localidad); ?></td>
+                                                <td><?php echo strtolower($listar->direccion_exacta); ?></td>
+                                                <td><?php echo strtolower($listar->e_social); ?></td>
+                                                <td><?php echo strtolower($listar->movimiento); ?></td>
+                                                <td><?php echo strtolower($listar->grado_instruccion); ?></td>
+                                                <td><?php echo strtolower($listar->profesion_oficio); ?></td>
+                                                <td><?php echo strtolower($listar->trabaja); ?></td>
+                                                <td><?php echo strtolower($listar->planes); ?></td>
+                                                <td> <button id="btnEditar<?php echo $listar->id_persona ?>" onclick="ireditar('<?php echo $listar->id_persona ?>')" data-editable="false" data-id="<?php echo $listar->id_persona ?>" class="btn-sm btn-primary btnEditar"> <i class="material-icons" id="icon<?php echo $listar->id_persona ?>">create</i></button>
+                                                    <button id="btnEliminar<?php echo $listar->id_persona ?>" onclick="eliminar('<?php echo $listar->id_persona ?>')" data-editable="false" data-id="<?php echo $listar->id_persona ?>" class="btn-sm btn-danger btnEditar"> <i class="material-icons" id="icon<?php echo $listar->id_persona ?>">delete</i></button> </td>
 
-                                
-                                <?php
-                                }
-                                ?>
-                                                
-                                              
+
+                                            <?php
+                                            }
+                                            ?>
+
+
                                     </tbody>
                                 </table>
                             </div>
@@ -122,6 +194,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
         //dataasesorate=JSON.parse(lista);
 
         $(document).ready(function() {
+
+            $('.form_date').datetimepicker({
+                language: 'es',
+                weekStart: 1,
+                todayBtn: 1,
+                autoclose: 1,
+                todayHighlight: 1,
+                startView: 2,
+                minView: 2,
+                forceParse: 0
+            });
+
 
 
             var url = urlBase + "index.php/C_agroproductivo/agro";

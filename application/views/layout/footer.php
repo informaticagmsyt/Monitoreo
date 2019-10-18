@@ -46,6 +46,10 @@
     <script src="<?= base_url()?>public/plugins/jquery-spinner/js/jquery.spinner.js"></script>
     <!-- Bootstrap Tags Input Plugin Js -->
     <script src="<?= base_url()?>public/plugins/bootstrap-tagsinput/bootstrap-tagsinput.js"></script>
+    <script src="<?= base_url()?>public/js/bootstrap-datetimepicker.js"></script>
+    <script src="<?= base_url()?>public/js/bootstrap-datetimepicker.es.js"></script>
+
+  
     <!-- noUISlider Plugin Js -->
     <script src="<?= base_url()?>public/plugins/nouislider/nouislider.js"></script>
     <script src="<?= base_url()?>public/js/edit.js"></script>

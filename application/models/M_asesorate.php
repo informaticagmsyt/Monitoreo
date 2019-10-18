@@ -294,5 +294,27 @@ public function updateProfesion($araycampos,$id){
   $this->db->where('id_persona_laboral', $id);
   $query= $this->db->update('laboral');
 }
+public function updatePlanes($araycampos,$id){
+
+  $this->db->set($araycampos);
+  $this->db->where('key_id_personas', $id);
+  $query= $this->db->update('planes_personas');
+}
+
+
+  public function eliminar($id){
+    $this->db->delete('brigadas_persona', array('id_persona_brigada' => $id)); 
+    $this->db->delete('contacto', array('id_persona_contacto' => $id)); 
+    $this->db->delete('direccion', array('id_persona_direccion' => $id)); 
+    $this->db->delete('proyecto', array('id_proyecto_personas' => $id)); 
+    $this->db->delete('espacio_politico', array('id_persona_espacio' => $id)); 
+    $this->db->delete('figura_juridica', array('id_persona_figura' => $id)); 
+    $this->db->delete('laboral', array('id_persona_laboral' => $id)); 
+    $this->db->delete('personas', array('id_persona' => $id)); 
+    $this->db->delete('planes_personas', array('key_id_personas' => $id)); 
+    $this->db->delete('solicitud', array('id_persona_solicitud' => $id)); 
+
+  }
+
 }
 ?>

@@ -1,41 +1,59 @@
+
+      function  ireditar(id){
+        var url = urlBase + "index.php/C_agroproductivo/editar/"+id;
+
+        location.href=url;
+      }
+
+
+function eliminar(id){
+  var url=urlBase+"index.php/C_asesorate/eliminar";
+  $.ajax({
+      method: "POST",
+      url: url,
+      data: {"id":id}
+    })
+      .done(function( resp ) {
+          alert(resp.response)
+          location.reload();
+       console.log(resp)
+      }).fail(function(error){
+
+          console.log(error.responseText)
+      });
+
+}
+
 function editar(id) {
     
     var editable=$("#btnEditar"+id).data('editable');
 
-    if(editable=='true'){
-        $(".editable"+id).prop("disabled", true);
-        $("#btnEditar"+id).data('editable','false');
 
-
-        $("#icon"+id).text('create');
+      
 
         var dataform ={
             id:id,
-            nombre:$("#nombre"+id).val(),
-            apellido:$("#apellido"+id).val(),
-            sexo:$("#sexo"+id).val(),
-            fecha_nac:$("#fecha_nac"+id).val(),
-            telefono:$("#telefono"+id).val(),
-            localidad:$("#localidad"+id).val(),
-            direccion:$("#direccion"+id).val(),
-            espacio:$("#espacio"+id).val(),
-            movimiento:$("#movimiento"+id).val(),
-            trabaja:$("#trabaja"+id).val(),
-            email:$("#email"+id).val(),
-            grado:$("#grado"+id).val(),
-            profesion:$("#profesion"+id).val(),
+            nombre:$("#nombre").val(),
+            apellido:$("#apellido").val(),
+            sexo:$("#sexo").val(),
+            fecha_nac:$("#fecha_nac").val(),
+            telefono:$("#telefono").val(),
+            localidad:$("#localidad").val(),
+            direccion:$("#direccion").val(),
+            espacio:$("#espacio").val(),
+            movimiento:$("#movimiento").val(),
+            trabaja:$("#trabaja").val(),
+            email:$("#email").val(),
+            grado:$("#grado").val(),
+            profesion:$("#oficio").val(),
+            id_estado:$("#estadoe").val(),
+       id_municipio:$("#municipio_id").val(),
+       id_planes:$("#planes").val(),
+		 id_parroquia:$("#parroquia_id").val()
 
         }
         guradar(dataform)
 
-    }else{
-
-        $(".editable"+id).prop("disabled", false);
-        $("#btnEditar"+id).data('editable','true')
-        $("#icon"+id).text('save');
- 
-
-           }
 }
 
 
@@ -47,10 +65,11 @@ function guradar(data){
         data: data
       })
         .done(function( resp ) {
+            alert(resp.response)
          console.log(resp)
         }).fail(function(error){
 
-            console.log(error)
+            console.log(error.responseText)
         });
 }
 
@@ -61,3 +80,45 @@ function setValueSelect(SelectId, Value) {
 		if (SelectObject[index].value == Value) SelectObject.selectedIndex = index;
 	}
 }
+if(idplanes)
+planes(idplanes);
+
+function planes(planes) {
+
+  var data={
+    
+  }
+  
+  $.ajax({
+    url: urlBase+"index.php/C_agroproductivo/getPlanes" ,
+    type: "GET",
+    dataType: "JSON",
+    data: data,
+    success: function(res) {
+      console.log(res)
+
+  if(res){
+ var data =res;
+
+ var html='';
+
+   for (var i in data) {
+
+       html='<option value='+data[i].id_planes+'>'+data[i].planes+'</option>';
+       $("#planes").append(html)
+   }
+   setValueSelect("planes", planes) 
+
+   
+  }
+  
+  
+  
+  
+    }
+      }).fail(function(re){
+  console.log(re.responseText)
+      
+      });
+  
+  }

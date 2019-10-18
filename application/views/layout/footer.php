@@ -49,6 +49,7 @@
     <!-- noUISlider Plugin Js -->
     <script src="<?= base_url()?>public/plugins/nouislider/nouislider.js"></script>
     <script src="<?= base_url()?>public/js/edit.js"></script>
-
+    <script src="<?= base_url()?>public/js/estadoMunParroquia.js"></script>
+   
   <!------------------------------------------------------------------------------------------------------>
 </html>

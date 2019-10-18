@@ -31,7 +31,8 @@ $monagas    = count($monagas);
 $esparta    = count($esparta);
 $portuguesa = count($portuguesa);
 $sucre    = count($sucre);
-$tachira  = count($tachira);
+
+$tachira  = $tachira[0]->count;
 $trujillo = count($trujillo);
 $vargas   = count($vargas);
 $yaracuy  = count($yaracuy);
@@ -269,7 +270,7 @@ $agro_distrito      = count($agro_distrito );
     <section class="content">
         <div class="container-fluid">
             <div class="block-header">
-                <h2>DASHBOARD</h2>
+                <h2>TABLERO</h2>
             </div>
             <!-- Widgets -->
             <div class="row clearfix">
@@ -1235,7 +1236,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $monagas?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $monagas;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1294,7 +1295,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $esparta?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $esparta;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1353,7 +1354,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $portuguesa?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $portuguesa;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1412,7 +1413,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $sucre?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $sucre;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1471,7 +1472,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $sucre?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $tachira;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1488,28 +1489,28 @@ $agro_distrito      = count($agro_distrito );
                                     <tbody>
                                         <tr>
                                             <td>Gestion Productiva</td>
-                                            <td> <?php  echo $agro_sucre; ?></td>
+                                            <td> <?php  echo $agro_tachira; ?></td>
                                         </tr>
                                         <tr>
                                             <td>Joven Emprendedor</td>
-                                            <td><span ><?php  echo $emprende_sucre; ?></span></td>
+                                            <td><span ><?php  echo $emprende_tachira; ?></span></td>
                                         </tr>
                                         <tr>
                                             <td>Plan Asesorate</td>
-                                            <td><span ><?php  echo $asesorate_sucre; ?></span></td>
+                                            <td><span ><?php  echo $asesorate_tachira; ?></span></td>
                                             <td>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>Proyecto Ingenio</td>
-                                            <td><span ><?php  echo $ingenio_sucre; ?></span></td>
+                                            <td><span ><?php  echo $ingenio_tachira; ?></span></td>
                                             <td>
                                             </td>
                                         </tr>
                                         <tr>
                                             <td>Brigadas Tecnicas</td>
                                             <td>
-                                                <span ><?php  echo $brigadas_sucre; ?></span>
+                                                <span ><?php  echo $brigadas_tachira; ?></span>
                                             </td>
                                             <td>
                                             </td>
@@ -1530,7 +1531,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $trujillo?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $trujillo;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1589,7 +1590,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $vargas?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $vargas;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1648,7 +1649,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $yaracuy?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $yaracuy;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>
@@ -1707,7 +1708,7 @@ $agro_distrito      = count($agro_distrito );
                                 <li class="dropdown">
 
                                     <ul class=" pull-right">
-                                        <li > <b><?php echo $zulia?></b> <small > Registrados </small>    </li>
+                                        <li > <b><?php echo $zulia;?></b> <small > Registrados </small>    </li>
                                     </ul>
                                 </li>
                             </ul>

@@ -6,7 +6,8 @@ class C_agroproductivo extends CI_Controller {
 	  function __construct(){
             parent::__construct();
             $this->load->database();
-            $this->load->Model('m_agro');
+			$this->load->Model('m_agro');
+			$this->load->Model('MbuscarPorFecha');
              if ($this->session->userdata('login') ==FALSE) {
             redirect(base_url('index.php/c_login'));
             }
@@ -18,7 +19,12 @@ class C_agroproductivo extends CI_Controller {
 			$this->load->view('layout/navbar');
 			$this->load->view('layout/aside');
 		
-			$listado = $this->m_agro->listar_agro();
+			if(isset($_REQUEST['desde'] ) && isset($_REQUEST['hasta'] ) && isset($_REQUEST['id'] )){
+				$listado =	$this->MbuscarPorFecha->listar($_REQUEST['desde'],$_REQUEST['hasta'],$_REQUEST['id']);
+			}else{
+				$listado = $this->m_agro->listar_agro();
+			}
+			
 			$lista=$listado;
 			$this->load->view('v_agroproductivo',compact('listado','listar'));
 			$this->load->view('layout/footer');

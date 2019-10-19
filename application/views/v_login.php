@@ -17,7 +17,7 @@ bg-light-blue">
 						        <div class="card">
 						            <div class="body">
 						                <form id="sign_in" method="POST" action="<?php echo base_url();?>index.php/c_login/ingresar">
-						                    <div class="msg" style="font-family: 'Leckerli One', cursive;"> <h3 class="text-center">Inicio de Sesion del Sistema </h3></div>
+						                    <div class="msg" style="font-family: 'Leckerli One', cursive;"> <h3 class="text-center">Inicie sesion en el sistema </h3></div>
 						                    <br>
 						                    <hr>
 						                    <div class="input-group">

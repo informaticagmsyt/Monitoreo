@@ -6,7 +6,7 @@ bg-light-blue" >
             <div class="navbar-header  blue darken-1">
                 <a href="javascript:void(0);" class="navbar-toggle collapsed blue darken-1" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"></a>
                 <a href="javascript:void(0);" class="bars"></a>
-                <a class="navbar-brand" href="index.html">Gran Mision Saber y Trabajo</a>
+                <a class="navbar-brand" href="<?= base_url('index.php/c_principal');?>">Gran Mision Saber y Trabajo</a>
             </div>
             <div class="collapse navbar-collapse" id="navbar-collapse">
                 <ul class="nav navbar-nav navbar-right blue darken-1">

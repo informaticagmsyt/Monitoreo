@@ -27,7 +27,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Listado de Peronas Registradas en el Programa Asesorate
+                                Listado de Personas Registradas en el Programa Asesorate
                             </h2>
                             <hr>
 
@@ -173,7 +173,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                         <td><?php echo strtolower($listar->profesion_oficio);?></td>
                                         <td><?php echo strtolower($listar->trabaja);?></td>
                                         <td><?php echo strtolower($listar->planes);?></td>
-                                        <td> <button id="btnEditar<?php echo $listar->id_persona ?>" onclick="ireditar('<?php echo $listar->id_persona ?>')" data-editable="false" data-id="<?php echo $listar->id_persona ?>" class="btn-sm btn-primary btnEditar"> <i class="material-icons" id="icon<?php echo $listar->id_persona ?>">create</i></button> </td>
+                                        <td> <button id="btnEditar<?php echo $listar->id_persona ?>" onclick="ireditar('<?php echo $listar->id_persona ?>')" data-editable="false" data-id="<?php echo $listar->id_persona ?>" class="btn-sm btn-primary btnEditar"> <i class="material-icons" id="icon<?php echo $listar->id_persona ?>">create</i></button> 
+                                             <button id="btnEliminar<?php echo $listar->id_persona ?>" onclick="eliminar('<?php echo $listar->id_persona ?>')" data-editable="false" data-id="<?php echo $listar->id_persona ?>" class="btn-sm btn-danger btnEditar"> <i class="material-icons" id="icon<?php echo $listar->id_persona ?>">delete</i></button> </td>
                                 <?php
                                 }
                                 ?>

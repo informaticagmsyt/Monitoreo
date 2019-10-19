@@ -29,7 +29,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                     <div class="card">
                         <div class="header">
                             <h2>
-                                Listado de Peronas Registradas en el Programa Agropoductivo
+                                Listado de Personas Registradas en el Programa Agropoductivo
                             </h2>
                             <hr>
 

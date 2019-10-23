@@ -3,7 +3,15 @@ class m_listado extends CI_Model
 {
     function _construct(){
         parent::__construct();  
+
+        $this->desde=null;
+        $this->hasta=null;
     } 
+
+    public function setDesdeHasta($desde, $hasta){
+      $this->desde=$desde;
+      $this->hasta=$hasta;
+    }
 public function get_estados(){
     $this->db->query("SELECT '*'");
     $this->db->from('estados');
@@ -40,6 +48,13 @@ public function listado_total(){
   $this->db->from('public.personas, public.planes, public.planes_personas');
   $this->db->where("personas.id_persona = planes_personas.key_id_personas AND
   planes.id_planes = planes_personas.key_id_planes AND planes.id_planes = '1'");
+   if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
+
   $agro = $this->db->get();
     return $agro->result();
  }
@@ -48,6 +63,13 @@ public function listado_total(){
   $this->db->from('public.personas, public.planes, public.planes_personas');
   $this->db->where("personas.id_persona = planes_personas.key_id_personas AND
   planes.id_planes = planes_personas.key_id_planes AND planes.id_planes = '2'");
+
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $agro = $this->db->get();
     return $agro->result();
  }
@@ -56,6 +78,13 @@ public function listado_total(){
   $this->db->from('public.personas, public.planes, public.planes_personas');
   $this->db->where("personas.id_persona = planes_personas.key_id_personas AND
   planes.id_planes = planes_personas.key_id_planes AND planes.id_planes = '3'");
+  
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $brigadas = $this->db->get();
     return $brigadas->result();
  }
@@ -64,6 +93,13 @@ public function listado_total(){
   $this->db->from('public.personas, public.planes, public.planes_personas');
   $this->db->where("personas.id_persona = planes_personas.key_id_personas AND
   planes.id_planes = planes_personas.key_id_planes AND planes.id_planes = '4'");
+
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $emprende = $this->db->get();
     return $emprende->result();
  }
@@ -72,6 +108,13 @@ public function listado_total(){
   $this->db->from('public.personas, public.planes, public.planes_personas');
   $this->db->where("personas.id_persona = planes_personas.key_id_personas AND
   planes.id_planes = planes_personas.key_id_planes AND planes.id_planes = '5'");
+
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $ingenio = $this->db->get();
     return $ingenio->result();
  }
@@ -82,6 +125,12 @@ public function listado_amazonas(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='1'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $amazonas = $this->db->get();
     return $amazonas->result();
  }
@@ -92,6 +141,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='2'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $anzoategui = $this->db->get();
     return $anzoategui->result();
  }
@@ -102,6 +157,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='3'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $apure = $this->db->get();
     return $apure->result();
  }
@@ -112,6 +173,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='4'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $aragua = $this->db->get();
     return $aragua->result();
  }
@@ -122,6 +189,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='5'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $barinas = $this->db->get();
     return $barinas->result();
  }
@@ -132,6 +205,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='6'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $bolivar = $this->db->get();
     return $bolivar->result();
  }
@@ -142,6 +221,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='7'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $carabobo = $this->db->get();
     return $carabobo->result();
  }
@@ -152,6 +237,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='8'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $cojedes = $this->db->get();
     return $cojedes->result();
  }
@@ -162,6 +253,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='9'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $delta = $this->db->get();
     return $delta->result();
  }
@@ -182,6 +279,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='10'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $falcon = $this->db->get();
     return $falcon->result();
  }
@@ -192,6 +295,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='11'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $guarico = $this->db->get();
     return $guarico->result();
  }
@@ -212,6 +321,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='13'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $merida = $this->db->get();
     return $merida->result();
  }
@@ -222,6 +337,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='14'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $miranda = $this->db->get();
     return $miranda->result();
  }
@@ -232,6 +353,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='15'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $monagas = $this->db->get();
     return $monagas->result();
  }
@@ -242,6 +369,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='16'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $esparta = $this->db->get();
     return $esparta->result();
  }
@@ -252,6 +385,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='17'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $portuguesa = $this->db->get();
     return $portuguesa->result();
  }
@@ -262,25 +401,36 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='18'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $sucre = $this->db->get();
     return $sucre->result();
  }
 
  
 
+ public function listado_tachira(){
+  $this->db->query("SELECT COUNT(*)");
+  $this->db->from('public.personas, 
+  public.direccion, 
+  public.estados');
+  $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
+  direccion.estado = estados.id_estado AND estados.id_estado='19'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+    $sucre = $this->db->get();
+    return $sucre->result();
+   }
 
-  public function listado_tachira(){
-  $this->db->select(" count(estado)");
-  $this->db->from('direccion');
-  $this->db->join('planes_personas',
-  'key_id_personas=id_persona_direccion','inner');
-  $this->db->where("estado",19);
 
 
 
-
-  $tachira = $this->db->get();
-    return $tachira->result();
  }
  public function listado_trujillo(){
   $this->db->query("SELECT COUNT(*)");
@@ -289,6 +439,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='20'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $trujillo = $this->db->get();
     return $trujillo->result();
  }
@@ -299,6 +455,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='21'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $vargas = $this->db->get();
     return $vargas->result();
  }
@@ -309,6 +471,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='22'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $yaracuy = $this->db->get();
     return $yaracuy->result();
  }
@@ -319,6 +487,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='23'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $zulia = $this->db->get();
     return $zulia->result();
  }}

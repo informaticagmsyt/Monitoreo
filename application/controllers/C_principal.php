@@ -12,13 +12,21 @@ class C_principal extends CI_Controller {
             $this->load->Model('m_emprende');
              if ($this->session->userdata('login') ==FALSE) {
             redirect(base_url('index.php/c_login'));
-            }
+             }
         }
 	public function index()
 	{
 		$this->load->view('layout/header');
 		$this->load->view('layout/navbar');
 		$this->load->view('layout/aside');
+		if(isset($_REQUEST['desde'] ) && isset($_REQUEST['hasta'] )){
+			
+			$desde=date("Y-m-d", strtotime($_REQUEST['desde'])); 
+			$hasta=date("Y-m-d", strtotime($_REQUEST['hasta'])); 
+			$this->m_listado->setDesdeHasta($desde, $hasta);
+			$this->m_asesorate->setDesdeHasta($desde, $hasta);
+		}
+
 /*****************************************************************************************************************************/
         $contar    = $this->m_listado->listado_total();
         $agro      = $this->m_listado->listado_agro();

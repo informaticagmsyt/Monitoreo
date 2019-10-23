@@ -19,7 +19,7 @@ class C_principal extends CI_Controller {
 		$this->load->view('layout/header');
 		$this->load->view('layout/navbar');
 		$this->load->view('layout/aside');
-		if(isset($_REQUEST['desde'] ) && isset($_REQUEST['hasta'] )){
+		if(isset($_REQUEST['desde'] ) && isset($_REQUEST['hasta'] ) && !empty($_REQUEST['desde'] ) && !empty($_REQUEST['hasta'] )){
 			
 			$desde=date("Y-m-d", strtotime($_REQUEST['desde'])); 
 			$hasta=date("Y-m-d", strtotime($_REQUEST['hasta'])); 

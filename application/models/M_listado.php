@@ -1,11 +1,14 @@
 <?php
 class m_listado extends CI_Model
 {
+
+  public $desde;
+  public $hasta;
     function _construct(){
         parent::__construct();  
 
-        $this->desde=null;
-        $this->hasta=null;
+        $this->desde=false;
+        $this->hasta=false;
     } 
 
     public function setDesdeHasta($desde, $hasta){
@@ -63,8 +66,8 @@ public function listado_total(){
   $this->db->from('public.personas, public.planes, public.planes_personas');
   $this->db->where("personas.id_persona = planes_personas.key_id_personas AND
   planes.id_planes = planes_personas.key_id_planes AND planes.id_planes = '2'");
-
-  if($this->desde && $this->hasta){
+  if(isset($this->desde))
+  if(isset($this->desde) && $this->desde && $this->hasta  ){
      
     $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
     $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
@@ -424,14 +427,16 @@ public function listado_anzoategui(){
      
     $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
     $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
-    $sucre = $this->db->get();
+ 
+   }
+  $sucre = $this->db->get();
     return $sucre->result();
    }
 
 
 
 
- }
+ 
  public function listado_trujillo(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('public.personas, 
@@ -445,9 +450,12 @@ public function listado_anzoategui(){
     $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
  
    }
-  $trujillo = $this->db->get();
-    return $trujillo->result();
+  $sucre = $this->db->get();
+    return $sucre->result();
  }
+
+ 
+
  public function listado_vargas(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('public.personas, 

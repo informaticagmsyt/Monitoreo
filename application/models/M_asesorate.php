@@ -1,6 +1,9 @@
 <?php
 class m_asesorate  extends CI_Model
 {
+
+  public $desde;
+  public $hasta;
     function _construct(){
         parent::__construct();  
         $this->desde=null;

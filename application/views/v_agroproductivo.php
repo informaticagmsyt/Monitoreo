@@ -34,17 +34,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <hr>
 
                             <form action="" method="get">
-                            <div class="row">
+                            <div class="row" style="background-color: rgba(128, 128, 128, 0.100);">
 
 
                                 <div class="col-md-1">
                                     <div class="input-group">
 
                                         <br>
-                                        <p>Buscar</p>
+                                        <label><center>Buscar por fecha</center></label>
                                     </div>
 
                                 </div>
+                                <br>
                                 <div class="col-md-3">
                                     <div class="form-group form-line">
                                         <label> Desde</label>
@@ -100,7 +101,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
                                 </div>
                             </div>
 
-</form>
+                            </form>
                             <ul class="header-dropdown m-r--5">
                                 <li class="dropdown">
                                     <a href="javascript:void(0);" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">

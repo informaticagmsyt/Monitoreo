@@ -222,7 +222,7 @@
             </div>
             <div class="legal">
                 <div class="copyright">
-                    &copy; 2019 <a href="#">Gran Mision Saber y Trabajo</a>.
+                    <span class="copy-left">&copy;</span> 2019 <a href="#">Gran Mision Saber y Trabajo</a>.
                 </div>
                 <div class="version">
                     <b>Version: </b> 0.3

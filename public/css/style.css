@@ -3059,6 +3059,7 @@ section.content {
 .info-box {
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   height: 80px;
+  width: 160px;
   display: flex;
   cursor: default;
   background-color: #fff;
@@ -7557,6 +7558,17 @@ fieldset[disabled] .form-control {
       overflow: hidden;
       margin-top: 5px;
       font-size: 13px; }
+      .copy-left {
+        display: inline-block;
+        text-align: right;
+        margin: 0px;
+        -moz-transform: scaleX(-1);
+        -o-transform: scaleX(-1);
+        -webkit-transform: scaleX(-1);
+        transform: scaleX(-1);
+        filter: FlipH;
+        -ms-filter: "FlipH";
+        }
   .sidebar .user-info {
     padding: 13px 15px 12px 15px;
     white-space: nowrap;

@@ -33,17 +33,18 @@ defined('BASEPATH') or exit('No direct script access allowed');
                             <hr>
 
 <form action="" method="get">
-<div class="row">
+<div class="row" style="background-color: rgba(128, 128, 128, 0.100);">
 
 
     <div class="col-md-1">
         <div class="input-group">
 
             <br>
-            <p>Buscar</p>
+            <label><center>Buscar por fecha</center></label>
         </div>
 
     </div>
+    <br>
     <div class="col-md-3">
         <div class="form-group form-line">
             <label> Desde</label>

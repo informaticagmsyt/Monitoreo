@@ -351,10 +351,9 @@ $agro_distrito      = count($agro_distrito );
 
 
     <div class="col-md-2">
-        <div class="input-group">
-
+        <div class="block-header">
             <br>
-            <p>Buscar</p>
+            <h2><center>BUSCAR POR FECHA</center></h2>
         </div>
 
     </div>

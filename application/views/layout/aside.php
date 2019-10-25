@@ -225,7 +225,7 @@
                     <span class="copy-left">&copy;</span> 2019 <a href="#">Gran Mision Saber y Trabajo</a>.
                 </div>
                 <div class="version">
-                    <b>Version: </b> 0.3
+                    <b>Version: </b> 1.0
                 </div>
             </div>
         </aside>

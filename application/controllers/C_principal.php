@@ -25,6 +25,10 @@ class C_principal extends CI_Controller {
 			$hasta=date("Y-m-d", strtotime($_REQUEST['hasta'])); 
 			$this->m_listado->setDesdeHasta($desde, $hasta);
 			$this->m_asesorate->setDesdeHasta($desde, $hasta);
+			$this->m_agro->setDesdeHasta($desde, $hasta);
+			$this->m_brigadas->setDesdeHasta($desde, $hasta);
+			$this->m_emprende->setDesdeHasta($desde, $hasta);
+			$this->m_ingenio->setDesdeHasta($desde, $hasta);
 		}
 
 /*****************************************************************************************************************************/

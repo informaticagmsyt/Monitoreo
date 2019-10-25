@@ -1,13 +1,27 @@
 <?php
 class m_lista_ingenio  extends CI_Model
 {
+  public $desde;
+  public $hasta;
     function _construct(){
-        parent::__construct();  
-    } 
+        parent::__construct();
+        $this->desde=null;
+        $this->hasta=null;  
+    }
+    public function setDesdeHasta($desde, $hasta){
+      $this->desde=$desde;
+      $this->hasta=$hasta;
+    }     
 public function amazonas_total(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('brigadas');
   $this->db->where('estado','1');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }
@@ -15,6 +29,12 @@ public function amazonas_emprende(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('emprendimiento');
   $this->db->where('estado','1');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }
@@ -22,6 +42,12 @@ public function amazonas_brigadas(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('brigadas');
   $this->db->where('estado','1');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }
@@ -29,6 +55,12 @@ public function amazonas_ingenio(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('ingenio');
   $this->db->where('estado','1');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }
@@ -37,6 +69,12 @@ public function amazonas_asesorate(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('asesorate');
   $this->db->where('estado','1');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }
@@ -44,6 +82,12 @@ public function amazonas_agro(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('agroproductivo');
   $this->db->where('estado','1');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }
@@ -52,6 +96,12 @@ public function anzoategui_brigadas(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('brigadas');
   $this->db->where('estado','2');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }
@@ -60,6 +110,12 @@ public function anzoategui_emprende(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('emprendimiento');
   $this->db->where('estado','2');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }
@@ -68,6 +124,12 @@ public function anzoategui_ingenio(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('ingenio');
   $this->db->where('estado','2');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }
@@ -75,6 +137,12 @@ public function anzoategui_asesorate(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('asesorate');
   $this->db->where('estado','2');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }
@@ -82,6 +150,12 @@ public function anzoategui_agro(){
   $this->db->query("SELECT COUNT(*)");
   $this->db->from('agroproductivo');
   $this->db->where('estado','2');
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $listado = $this->db->get();
     return $listado->result();
 }

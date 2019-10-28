@@ -272,6 +272,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='24'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $distrito = $this->db->get();
     return $distrito->result();
  }
@@ -314,6 +320,12 @@ public function listado_anzoategui(){
   public.estados');
   $this->db->where("personas.id_persona = direccion.id_persona_direccion AND
   direccion.estado = estados.id_estado AND estados.id_estado='12'");
+  if($this->desde && $this->hasta){
+     
+    $this->db->where('personas.f_creacion >=', $this->desde." 00:00:00");
+    $this->db->where('personas.f_creacion <=', $this->hasta." 23:59:00");
+ 
+   }
   $lara = $this->db->get();
     return $lara->result();
  }
